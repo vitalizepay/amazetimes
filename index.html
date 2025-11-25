@@ -1,1 +1,343 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazeTimes - அமேஸ் டைம்ஸ் | 25 நவம்பர் 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Updated Lucide Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Mukta Malar', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .breaking-news-anim {
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
 
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white text-xs py-2 px-4 flex justify-between items-center">
+        <div id="current-date">செவ்வாய், 25 நவம்பர் 2025</div>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-red-400">தொடர்புக்கு</a>
+            <a href="#" class="hover:text-red-400">விளம்பரம்</a>
+            <a href="#" class="hover:text-red-400">English</a>
+        </div>
+    </div>
+
+    <!-- Header & Logo -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-red-600 text-white p-2 rounded font-bold text-2xl">AT</div>
+                <div>
+                    <h1 class="text-3xl font-extrabold text-red-700 leading-none">AmazeTimes</h1>
+                    <p class="text-sm text-gray-500 font-medium">உண்மை உடனுக்குடன்</p>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-bold text-gray-700">
+                <a href="#" class="hover:text-red-600 transition">முகப்பு</a>
+                <a href="#tn" class="hover:text-red-600 transition">தமிழ்நாடு</a>
+                <a href="#cinema" class="hover:text-red-600 transition">சினிமா</a>
+                <a href="#politics" class="hover:text-red-600 transition">அரசியல்</a>
+                <a href="#sports" class="hover:text-red-600 transition">விளையாட்டு</a>
+                <a href="#weather" class="hover:text-red-600 transition">வானிலை</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t">
+            <a href="#" class="block py-2 px-4 hover:bg-red-100">முகப்பு</a>
+            <a href="#tn" class="block py-2 px-4 hover:bg-red-100">தமிழ்நாடு</a>
+            <a href="#cinema" class="block py-2 px-4 hover:bg-red-100">சினிமா</a>
+            <a href="#politics" class="block py-2 px-4 hover:bg-red-100">அரசியல்</a>
+            <a href="#sports" class="block py-2 px-4 hover:bg-red-100">விளையாட்டு</a>
+        </div>
+    </header>
+
+    <!-- Breaking News Ticker -->
+    <div class="bg-red-600 text-white flex items-center overflow-hidden h-10">
+        <div class="bg-red-800 px-4 py-2 font-bold z-10 whitespace-nowrap shadow-lg">முக்கிய செய்திகள்</div>
+        <div class="flex-1 overflow-hidden relative h-full flex items-center">
+            <div class="whitespace-nowrap breaking-news-anim absolute pl-4">
+                🔴 சென்னை மற்றும் 14 மாவட்டங்களில் பள்ளிகளுக்கு விடுமுறை... 🔴 'சென்யார்' புயல் எச்சரிக்கை: மீனவர்கள் கடலுக்கு செல்ல தடை... 🔴 மகளிர் உரிமைத் தொகை: புதிதாக விண்ணப்பித்தவர்களுக்கு டிசம்பர் 15 முதல் பணம்...
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 flex-grow">
+        
+        <!-- Hero Section: Top Story -->
+        <section id="weather" class="mb-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Main Feature -->
+                <div class="md:col-span-2 bg-white rounded-lg shadow-lg overflow-hidden hover-scale group cursor-pointer">
+                    <div class="relative h-64 md:h-96 bg-gray-300">
+                        <img src="https://images.unsplash.com/photo-1454789476662-53eb23ba5907?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Cyclone Rain" 
+                             class="w-full h-full object-cover group-hover:opacity-90 transition">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent p-6 text-white">
+                            <span class="bg-red-600 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">வானிலை அறிக்கை</span>
+                            <h2 class="text-2xl md:text-4xl font-bold mb-2">மிரட்டும் 'சென்யார்' புயல்: 14 மாவட்டங்களில் பள்ளிகளுக்கு விடுமுறை!</h2>
+                            <p class="text-gray-200 hidden md:block">வங்கக்கடலில் உருவாகியுள்ள காற்றழுத்த தாழ்வு மண்டலம் புயலாக மாற வாய்ப்பு. சென்னை, மதுரை, இராமநாதபுரம் உள்ளிட்ட மாவட்டங்களில் கனமழை எச்சரிக்கை விடுக்கப்பட்டுள்ளது.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Stories -->
+                <div class="space-y-6">
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition cursor-pointer border-l-4 border-blue-500">
+                        <h3 class="font-bold text-lg mb-2 hover:text-blue-600">மேட்டூர் அணை நிலவரம்</h3>
+                        <p class="text-sm text-gray-600 mb-2">தொடர் மழை காரணமாக மேட்டூர் அணைக்கு நீர்வரத்து அதிகரிப்பு. விவசாயிகள் மகிழ்ச்சி.</p>
+                        <span class="text-xs text-gray-400">10 நிமிடங்களுக்கு முன்</span>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition cursor-pointer border-l-4 border-green-500">
+                        <h3 class="font-bold text-lg mb-2 hover:text-green-600">தங்கம் விலை நிலவரம்</h3>
+                        <p class="text-sm text-gray-600 mb-2">சென்னையில் இன்று ஆபரணத் தங்கத்தின் விலை சவரனுக்கு ரூ.120 குறைந்தது. இன்றைய விலை விபரம் உள்ளே.</p>
+                        <span class="text-xs text-gray-400">1 மணி நேரத்திற்கு முன்</span>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-100 text-center">
+                        <div class="text-blue-800 font-bold mb-1">இன்றைய ராசிபலன்</div>
+                        <i data-lucide="star" class="w-8 h-8 mx-auto text-yellow-500 mb-2"></i>
+                        <button class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm hover:bg-blue-700 transition">பார்க்க</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Politics & TN News -->
+        <section id="tn" class="mb-8">
+            <div class="flex items-center justify-between mb-4 border-b-2 border-red-600 pb-2">
+                <h2 class="text-2xl font-bold text-gray-800">தமிழகம் & அரசியல்</h2>
+                <a href="#" class="text-red-600 text-sm font-semibold hover:underline">மேலும் செய்திகள் &rarr;</a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- News Card 1 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1461301214746-1e790926d323?q=80&w=500&auto=format&fit=crop" alt="Women Scheme" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-blue-600 text-xs font-bold uppercase">அரசு அறிவிப்பு</span>
+                        <h3 class="font-bold text-xl mt-1 mb-2 leading-tight">மகளிர் உரிமைத் தொகை: துணை முதல்வர் முக்கிய அறிவிப்பு</h3>
+                        <p class="text-gray-600 text-sm mb-3">புதிதாக விண்ணப்பித்த தகுதியான பெண்களுக்கு டிசம்பர் 15 முதல் வங்கி கணக்கில் பணம் வரவு வைக்கப்படும் என துணை முதல்வர் உதயநிதி ஸ்டாலின் உறுதி.</p>
+                        <div class="flex items-center text-xs text-gray-400 gap-2">
+                            <i data-lucide="clock" class="w-3 h-3"></i> <span>2 மணி நேரத்திற்கு முன்</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?q=80&w=500&auto=format&fit=crop" alt="TN Assembly" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-red-600 text-xs font-bold uppercase">அரசியல்</span>
+                        <h3 class="font-bold text-xl mt-1 mb-2 leading-tight">கூட்ட நெரிசலை தவிர்க்க புதிய கட்டுப்பாடு?</h3>
+                        <p class="text-gray-600 text-sm mb-3">அரசியல் பொதுக்கூட்டங்களுக்கான வரைவு நெறிமுறைகள் குறித்து அனைத்து கட்சி கூட்டம். நவம்பர் இறுதிக்குள் அறிக்கை தாக்கல் செய்ய திட்டம்.</p>
+                        <div class="flex items-center text-xs text-gray-400 gap-2">
+                            <i data-lucide="clock" class="w-3 h-3"></i> <span>4 மணி நேரத்திற்கு முன்</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=500&auto=format&fit=crop" alt="Metro Train" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <span class="text-purple-600 text-xs font-bold uppercase">சென்னை</span>
+                        <h3 class="font-bold text-xl mt-1 mb-2 leading-tight">சென்னை மெட்ரோ 2-ம் கட்ட பணிகள் தீவிரம்</h3>
+                        <p class="text-gray-600 text-sm mb-3">பூந்தமல்லி - போரூர் இடையேயான வழித்தடத்தில் சோதனை ஓட்டம் விரைவில் தொடங்கும் என மெட்ரோ நிர்வாகம் தகவல்.</p>
+                        <div class="flex items-center text-xs text-gray-400 gap-2">
+                            <i data-lucide="clock" class="w-3 h-3"></i> <span>5 மணி நேரத்திற்கு முன்</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Cinema -->
+        <section id="cinema" class="mb-8">
+            <div class="flex items-center justify-between mb-4 border-b-2 border-yellow-500 pb-2">
+                <h2 class="text-2xl font-bold text-gray-800">சினிமா கொண்டாட்டம்</h2>
+                <a href="#" class="text-yellow-600 text-sm font-semibold hover:underline">மேலும் &rarr;</a>
+            </div>
+            
+            <div class="bg-black text-white rounded-xl p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500 opacity-10 rounded-full -mr-16 -mt-16"></div>
+                <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                    <div>
+                        <h3 class="text-yellow-400 font-bold text-lg mb-2">திரையரங்குகளில் இந்த வாரம்</h3>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4 items-center bg-gray-800 p-3 rounded hover:bg-gray-700 transition cursor-pointer">
+                                <div class="w-12 h-12 bg-gray-600 rounded flex items-center justify-center text-2xl">🎬</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">மாஸ்க் (Mask)</h4>
+                                    <p class="text-gray-400 text-xs">கவின், ஆண்ட்ரியா நடிப்பு - டார்க் காமெடி</p>
+                                </div>
+                                <span class="ml-auto bg-green-600 text-xs px-2 py-1 rounded">Housefull</span>
+                            </li>
+                            <li class="flex gap-4 items-center bg-gray-800 p-3 rounded hover:bg-gray-700 transition cursor-pointer">
+                                <div class="w-12 h-12 bg-gray-600 rounded flex items-center justify-center text-2xl">🔥</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">தீயவர் குலைகள் நடுங்க</h4>
+                                    <p class="text-gray-400 text-xs">அர்ஜுன், ஐஸ்வர்யா ராஜேஷ் - த்ரில்லர்</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-center bg-gray-800 p-3 rounded hover:bg-gray-700 transition cursor-pointer">
+                                <div class="w-12 h-12 bg-gray-600 rounded flex items-center justify-center text-2xl">📽️</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">மிடில் கிளாஸ் (Middle Class)</h4>
+                                    <p class="text-gray-400 text-xs">முனிஷ்காந்த் - குடும்ப சித்திரம்</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-l border-gray-700 pl-6 flex flex-col justify-center">
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">விரைவில் வருகிறது</span>
+                        <h2 class="text-4xl font-extrabold mb-4">தேரே இஷ்க் மே (Tere Ishk Mein)</h2>
+                        <p class="text-gray-300 mb-6">தனுஷ் மற்றும் ஆனந்த் எல்.ராய் கூட்டணியில் மீண்டும் ஒரு காதல் காவியம். நவம்பர் 28 அன்று வெளியாகிறது!</p>
+                        <button class="bg-yellow-500 text-black font-bold py-2 px-6 rounded-full w-max hover:bg-yellow-400 transition">டிரெய்லர் பார்க்க</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports & Tech Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Sports -->
+            <section id="sports">
+                <div class="flex items-center justify-between mb-4 border-b-2 border-blue-600 pb-2">
+                    <h2 class="text-2xl font-bold text-gray-800">விளையாட்டு</h2>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 flex gap-4 mb-4">
+                    <img src="https://images.unsplash.com/photo-1531415074984-c56966a6d29d?q=80&w=200&auto=format&fit=crop" class="w-24 h-24 object-cover rounded" alt="Cricket">
+                    <div>
+                        <h3 class="font-bold text-lg leading-tight mb-2">மகளிர் டி20 உலகக்கோப்பை (Blind): இந்தியா சாம்பியன்!</h3>
+                        <p class="text-sm text-gray-600">இறுதிப்போட்டியில் நேபாளத்தை வீழ்த்தி இந்திய மகளிர் அணி வரலாற்று வெற்றி பெற்றது.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 flex gap-4">
+                    <img src="https://images.unsplash.com/photo-1624194686522-8755038c35b6?q=80&w=200&auto=format&fit=crop" class="w-24 h-24 object-cover rounded" alt="Ashes">
+                    <div>
+                        <h3 class="font-bold text-lg leading-tight mb-2">ஆஷஸ் 2025: ஆஸ்திரேலியா அதிரடி</h3>
+                        <p class="text-sm text-gray-600">டிராவிஸ் ஹெட்டின் அதிரடி ஆட்டத்தால் முதல் டெஸ்ட் போட்டியில் ஆஸ்திரேலியா முன்னிலை.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Poll/Engagement -->
+            <section>
+                <div class="flex items-center justify-between mb-4 border-b-2 border-gray-400 pb-2">
+                    <h2 class="text-2xl font-bold text-gray-800">கருத்துக்கணிப்பு</h2>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 border-t-4 border-red-600">
+                    <h3 class="font-bold text-lg mb-4">பருவமழை முன்னெச்சரிக்கை நடவடிக்கைகள் திருப்திகரமாக உள்ளதா?</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-gray-50 transition">
+                            <input type="radio" name="poll" class="w-5 h-5 text-red-600">
+                            <span class="ml-3 font-medium">ஆம், அரசு சிறப்பாக செயல்படுகிறது</span>
+                        </label>
+                        <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-gray-50 transition">
+                            <input type="radio" name="poll" class="w-5 h-5 text-red-600">
+                            <span class="ml-3 font-medium">இல்லை, இன்னும் மேம்படுத்த வேண்டும்</span>
+                        </label>
+                        <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-gray-50 transition">
+                            <input type="radio" name="poll" class="w-5 h-5 text-red-600">
+                            <span class="ml-3 font-medium">கருத்து சொல்ல விரும்பவில்லை</span>
+                        </label>
+                    </div>
+                    <button class="mt-4 w-full bg-gray-900 text-white py-2 rounded font-bold hover:bg-gray-800 transition">வாக்களி</button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-8">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="bg-red-600 text-white p-1 rounded font-bold">AT</div>
+                    <h2 class="text-xl font-bold text-white">AmazeTimes</h2>
+                </div>
+                <p class="text-sm">தமிழ் மக்களின் நம்பகமான செய்தி தளம். அரசியல், சினிமா, விளையாட்டு செய்திகள் உடனுக்குடன்.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4">பிரிவுகள்</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">தமிழ்நாடு</a></li>
+                    <li><a href="#" class="hover:text-white">இந்தியா</a></li>
+                    <li><a href="#" class="hover:text-white">உலகம்</a></li>
+                    <li><a href="#" class="hover:text-white">சினிமா</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4">சமூகம்</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="hover:text-white"><i data-lucide="youtube"></i></a>
+                    <a href="#" class="hover:text-white"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4">செயலி</h3>
+                <p class="text-sm mb-4">எங்கள் செயலியை பதிவிறக்கம் செய்யுங்கள்</p>
+                <div class="flex gap-2">
+                    <button class="bg-gray-800 px-3 py-2 rounded text-xs hover:bg-gray-700 border border-gray-700">Google Play</button>
+                    <button class="bg-gray-800 px-3 py-2 rounded text-xs hover:bg-gray-700 border border-gray-700">App Store</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs mt-8 pt-8 border-t border-gray-800">
+            &copy; 2025 AmazeTimes News. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Updated Initialization
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide library failed to load.");
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        const dateElement = document.getElementById('current-date');
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    </script>
+</body>
+</html>
