@@ -16,24 +16,15 @@
             font-family: 'Mukta Malar', sans-serif;
             background-color: #f3f4f6;
         }
-
         .breaking-news-anim {
             animation: marquee 25s linear infinite;
         }
-
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.02);
-        }
-
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.02); }
         .prgi-badge {
             position: fixed;
             top: 8px;
@@ -45,7 +36,7 @@
             border-radius: 6px;
             font-weight: bold;
             z-index: 9999;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -57,7 +48,7 @@
 
     <!-- Top Bar -->
     <div class="bg-gray-900 text-white text-xs py-2 px-4 flex justify-between items-center">
-        <div id="current-date">வியாழன், 05 டிசம்பர் 2025 | காலை 9:00</div>
+        <div>வியாழன், 05 டிசம்பர் 2025 | காலை 9:00</div>
         <div class="flex space-x-4">
             <a href="#" class="hover:text-red-400">தொடர்புக்கு</a>
             <a href="#" class="hover:text-red-400">விளம்பரம்</a>
@@ -72,7 +63,6 @@
                 <div class="w-12 h-12 bg-red-700 rounded text-white flex items-center justify-center font-bold text-xl">
                     AT
                 </div>
-
                 <div>
                     <h1 class="text-3xl font-extrabold text-red-700 leading-none">AmazeTimes</h1>
                     <p class="text-sm text-gray-500 font-medium">உண்மை உடனுக்குடன்</p>
@@ -84,19 +74,14 @@
             </button>
 
             <nav class="hidden md:flex space-x-6 font-bold text-gray-700">
-                <a href="#" class="text-red-600 transition">முகப்பு</a>
-                <a href="#tn" class="hover:text-red-600 transition">தமிழ்நாடு</a>
-                <a href="#india" class="hover:text-red-600 transition">இந்தியா</a>
-                <a href="#cinema" class="hover:text-red-600 transition">சினிமா</a>
-                <a href="#politics" class="hover:text-red-600 transition">அரசியல்</a>
-                <a href="#sports" class="hover:text-red-600 transition">விளையாட்டு</a>
+                <a href="#" class="text-red-600">முகப்பு</a>
+                <a href="#tn" class="hover:text-red-600">தமிழ்நாடு</a>
+                <a href="#cinema" class="hover:text-red-600">சினிமா</a>
             </nav>
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t">
-            <a href="#" class="block py-2 px-4 hover:bg-red-100">முகப்பு</a>
             <a href="#tn" class="block py-2 px-4 hover:bg-red-100">தமிழ்நாடு</a>
-            <a href="#india" class="block py-2 px-4 hover:bg-red-100">இந்தியா</a>
             <a href="#cinema" class="block py-2 px-4 hover:bg-red-100">சினிமா</a>
         </div>
     </header>
@@ -105,44 +90,65 @@
     <div class="bg-red-600 text-white flex items-center overflow-hidden h-10">
         <div class="bg-red-800 px-4 py-2 font-bold whitespace-nowrap shadow-lg">முக்கிய செய்திகள்</div>
 
-        <div class="flex-1 overflow-hidden relative h-full flex items-center">
+        <div class="flex-1 overflow-hidden relative">
             <div class="breaking-news-anim absolute pl-4 text-sm font-medium whitespace-nowrap">
-
-                🌧️ **Cyclone Ditwah — சென்னை, காஞ்சி, திருவள்ளூரில் இன்று மீண்டும் கனமழை எச்சரிக்கை**  
-                🏫 **சென்னை & திருவள்ளூர் பள்ளிகள் இன்று மூடப்பட்டது – பாதுகாப்பு நடவடிக்கை**  
-                🚨 **வடிகால் கோளாறால் பல பகுதிகளில் வெள்ளம் – பொதுமக்கள் சிரமம் அதிகரிப்பு**  
-                🌾 **85,000+ ஹெக்டேர் நெல் நிலங்கள் வெள்ளம் – விவசாயிகள் பெரும் நஷ்டம்**  
-
+                🌧️ Cyclone Ditwah — தமிழகத்தில் மீண்டும் கனமழை எச்சரிக்கை  
+                🏫 சென்னை & திருவள்ளூர் பள்ளிகள் இன்று மூடப்பட்டது  
+                🚨 வடிகால் கோளாறால் வெள்ள பாதிப்பு — பொதுமக்கள் சிரமம்  
+                🌾 நெல் நிலங்கள் வெள்ளத்தில் மூழ்கியது — விவசாய நஷ்டம் அதிகரிப்பு  
+                🎬 Vijay அரசியல் குறிப்பு — Kollywoodல் பரபரப்பு  
             </div>
         </div>
     </div>
 
-    <!-- NEWS CARDS START -->
+    <!-- TAMIL NADU NEWS -->
     <section id="tn" class="container mx-auto px-4 mt-6">
-
         <h2 class="text-2xl font-bold text-red-700 mb-4">தமிழ்நாடு செய்திகள்</h2>
 
         <div class="grid md:grid-cols-3 gap-6">
 
-            <!-- Card 1 -->
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
                 <h3 class="text-lg font-bold">சென்னை & திருவள்ளூர்: பள்ளிகள் இன்று மூடப்பட்டது</h3>
-                <p class="text-gray-600 text-sm mt-2">Cyclone Ditwah–ன் தொடர்ந்து மழை காரணமாக மாணவர்கள் பாதுகாப்புக்காக பள்ளிகள் தற்காலிகமாக மூடப்பட்டன.</p>
+                <p class="text-gray-600 text-sm mt-2">Cyclone Ditwah காரணமாக கனமழை & வெள்ளப்பாதிப்பு. பாதுகாப்புக்காக விடுமுறை.</p>
             </div>
 
-            <!-- Card 2 -->
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">வடிகால் கோளாறு — பல இடங்களில் கடும் நீர்நிலை & பாதிப்பு</h3>
-                <p class="text-gray-600 text-sm mt-2">சென்னையின் Avadi, Madhavaram, Perambur உள்ளிட்ட பகுதிகளில் வடிகால் சீர்கேட்டால் வெள்ளம் அதிகரித்தது.</p>
+                <h3 class="text-lg font-bold">வடிகால் பிரச்சினை — பல இடங்களில் நீர்நிலை</h3>
+                <p class="text-gray-600 text-sm mt-2">Avadi, Madhavaram உள்ளிட்ட பகுதிகளில் சாலைகள், வீடுகள் நீரில் மூழ்கின.</p>
             </div>
 
-            <!-- Card 3 -->
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">விவசாய நிலங்கள் வெள்ளத்தில் மூழ்கின — பயிர்களுக்கு பெரும் சேதம்</h3>
-                <p class="text-gray-600 text-sm mt-2">Villupuram, Cuddalore, Mayiladuthurai உள்ளிட்ட மாவட்டங்களில் நெல் பயிர்கள் பெருமளவு சேதமடைந்தது.</p>
+                <h3 class="text-lg font-bold">விவசாய நிலங்கள் வெள்ளத்தில் மூழ்கின</h3>
+                <p class="text-gray-600 text-sm mt-2">85,000+ ஹெக்டேர் நெல் பயிர்கள் சேதம் — விவசாயிகள் நஷ்டத்தில் உள்ளனர்.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CINEMA NEWS -->
+    <section id="cinema" class="container mx-auto px-4 mt-10">
+        <h2 class="text-2xl font-bold text-purple-700 mb-4">🎬 சினிமா செய்திகள்</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white p-4 shadow rounded hover-scale">
+                <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
+                <h3 class="text-lg font-bold">விஜய் அரசியல் குறிப்பு — ரசிகர்கள் பரபரப்பு</h3>
+                <p class="text-gray-600 text-sm mt-2">தளபதி விஜயின் சமீப பேட்டி Kollywood-ல் பெரும் விவாதத்தை கிளப்பியுள்ளது.</p>
+            </div>
+
+            <div class="bg-white p-4 shadow rounded hover-scale">
+                <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
+                <h3 class="text-lg font-bold">அஜித் AK-64 — Pongal 2026 வெளியீடு உறுதி</h3>
+                <p class="text-gray-600 text-sm mt-2">அஜித் படப்பிடிப்பு 80% முடிந்தது — ரசிகர்கள் கொண்டாட்டம்.</p>
+            </div>
+
+            <div class="bg-white p-4 shadow rounded hover-scale">
+                <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
+                <h3 class="text-lg font-bold">சூர்யாவின் “Vaadivaasal” — புதிய போஸ்டர் வைரல்</h3>
+                <p class="text-gray-600 text-sm mt-2">பா.ரஞ்சித் இயக்கத்தில் உருவாகும் படம் — எதிர்பார்ப்பு உச்சத்தில்.</p>
             </div>
 
         </div>
@@ -151,19 +157,18 @@
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-400 py-8 mt-8">
         <div class="text-center text-xs mt-8 pt-8 border-t border-gray-800">
-            &copy; 2025 AmazeTimes News. All rights reserved.
+            © 2025 AmazeTimes News. All rights reserved.
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            if (window.lucide) lucide.createIcons();
-        });
-
-        function toggleMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
-    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) lucide.createIcons();
+    });
+    function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+</script>
 
 </body>
 </html>
