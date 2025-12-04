@@ -4,51 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmazeTimes - அமேஸ் டைம்ஸ் | 05 டிசம்பர் 2025</title>
+    <title>AmazeTimes - அமேஸ் டைம்ஸ் | 06 டிசம்பர் 2025</title>
+
     <link rel="icon" type="image/png" href="Gemini_Generated_Image_ly82faly82faly82.png">
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body {
-            font-family: 'Mukta Malar', sans-serif;
-            background-color: #f3f4f6;
-        }
-        .breaking-news-anim {
-            animation: marquee 25s linear infinite;
-        }
+        body { font-family: 'Mukta Malar', sans-serif; background-color: #f3f4f6; }
+
+        .breaking-news-anim { animation: marquee 25s linear infinite; }
+
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
         .hover-scale { transition: transform 0.3s ease; }
         .hover-scale:hover { transform: scale(1.02); }
+
         .prgi-badge {
-            position: fixed;
-            top: 8px;
-            right: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 11px;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: bold;
-            z-index: 9999;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            position: fixed; top: 8px; right: 10px; background: #000; color: #fff;
+            padding: 4px 10px; border-radius: 6px; font-weight: bold; font-size: 11px; z-index: 9999;
         }
     </style>
 </head>
 
 <body class="flex flex-col min-h-screen">
 
-    <!-- PRGI Badge -->
-    <div class="prgi-badge"> PRGI NO: TNBIL/2023/88659 </div>
+    <!-- PRGI -->
+    <div class="prgi-badge">PRGI NO: TNBIL/2023/88659</div>
 
     <!-- Top Bar -->
-    <div class="bg-gray-900 text-white text-xs py-2 px-4 flex justify-between items-center">
-        <div>வியாழன், 05 டிசம்பர் 2025 | காலை 9:00</div>
+    <div class="bg-gray-900 text-white text-xs py-2 px-4 flex justify-between">
+        <div>வெள்ளி, 06 டிசம்பர் 2025 | காலை 9:20</div>
         <div class="flex space-x-4">
             <a href="#" class="hover:text-red-400">தொடர்புக்கு</a>
             <a href="#" class="hover:text-red-400">விளம்பரம்</a>
@@ -58,14 +51,13 @@
 
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="container mx-auto flex justify-between px-4 py-4 items-center">
+
             <div class="flex items-center gap-2">
-                <div class="w-12 h-12 bg-red-700 rounded text-white flex items-center justify-center font-bold text-xl">
-                    AT
-                </div>
+                <div class="w-12 h-12 bg-red-700 rounded text-white flex items-center justify-center text-xl font-bold">AT</div>
                 <div>
-                    <h1 class="text-3xl font-extrabold text-red-700 leading-none">AmazeTimes</h1>
-                    <p class="text-sm text-gray-500 font-medium">உண்மை உடனுக்குடன்</p>
+                    <h1 class="text-3xl font-extrabold text-red-700">AmazeTimes</h1>
+                    <p class="text-sm text-gray-500">உண்மை உடனுக்குடன்</p>
                 </div>
             </div>
 
@@ -77,86 +69,90 @@
                 <a href="#" class="text-red-600">முகப்பு</a>
                 <a href="#tn" class="hover:text-red-600">தமிழ்நாடு</a>
                 <a href="#cinema" class="hover:text-red-600">சினிமா</a>
+                <a href="#india" class="hover:text-red-600">இந்தியா</a>
+                <a href="#politics" class="hover:text-red-600">அரசியல்</a>
+                <a href="#sports" class="hover:text-red-600">விளையாட்டு</a>
             </nav>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t">
-            <a href="#tn" class="block py-2 px-4 hover:bg-red-100">தமிழ்நாடு</a>
-            <a href="#cinema" class="block py-2 px-4 hover:bg-red-100">சினிமா</a>
         </div>
     </header>
 
     <!-- Breaking News -->
-    <div class="bg-red-600 text-white flex items-center overflow-hidden h-10">
-        <div class="bg-red-800 px-4 py-2 font-bold whitespace-nowrap shadow-lg">முக்கிய செய்திகள்</div>
+    <div class="bg-red-600 text-white h-10 flex items-center overflow-hidden">
 
-        <div class="flex-1 overflow-hidden relative">
-            <div class="breaking-news-anim absolute pl-4 text-sm font-medium whitespace-nowrap">
-                🌧️ Cyclone Ditwah — தமிழகத்தில் மீண்டும் கனமழை எச்சரிக்கை  
-                🏫 சென்னை & திருவள்ளூர் பள்ளிகள் இன்று மூடப்பட்டது  
-                🚨 வடிகால் கோளாறால் வெள்ள பாதிப்பு — பொதுமக்கள் சிரமம்  
-                🌾 நெல் நிலங்கள் வெள்ளத்தில் மூழ்கியது — விவசாய நஷ்டம் அதிகரிப்பு  
-                🎬 Vijay அரசியல் குறிப்பு — Kollywoodல் பரபரப்பு  
+        <div class="bg-red-800 px-4 py-2 font-bold whitespace-nowrap">முக்கிய செய்திகள்</div>
+
+        <div class="relative flex-1 overflow-hidden">
+            <div class="breaking-news-anim absolute whitespace-nowrap pl-4 text-sm font-medium">
+
+                🌧️ சென்னை, திருவள்ளூர், காஞ்சி: பள்ளிகள் இன்று மூடப்பட்டது  
+                🚨 Cyclone Ditwah — பல இடங்களில் இன்னும் நீர்நிலை  
+                🌾 1.1 லட்சம் ஹெக்டேர் நெல் பயிர்கள் பாதிப்பு  
+                ⚡ TANGEDCO: மின்சாரம் மீட்பு பணி வேகத்தில்  
+                🎬 விஜய் அரசியல் குறிப்பு வைரல் | அஜித் AK64 Pongal release confirmed  
+
             </div>
         </div>
     </div>
 
-    <!-- TAMIL NADU NEWS -->
+    <!-- Tamil Nadu Section -->
     <section id="tn" class="container mx-auto px-4 mt-6">
+        
         <h2 class="text-2xl font-bold text-red-700 mb-4">தமிழ்நாடு செய்திகள்</h2>
 
         <div class="grid md:grid-cols-3 gap-6">
 
-            <div class="bg-white p-4 shadow rounded hover-scale">
+            <div class="bg-white rounded p-4 shadow hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">சென்னை & திருவள்ளூர்: பள்ளிகள் இன்று மூடப்பட்டது</h3>
-                <p class="text-gray-600 text-sm mt-2">Cyclone Ditwah காரணமாக கனமழை & வெள்ளப்பாதிப்பு. பாதுகாப்புக்காக விடுமுறை.</p>
+                <h3 class="font-bold text-lg">சென்னையில் பள்ளிகள் இன்று மூடப்பட்டது</h3>
+                <p class="text-sm text-gray-600 mt-2">கனமழை காரணமாக மாணவர்களின் பாதுகாப்பை கருத்தில் கொண்டு பள்ளிகள் மூட உத்தரவு.</p>
             </div>
 
-            <div class="bg-white p-4 shadow rounded hover-scale">
+            <div class="bg-white rounded p-4 shadow hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">வடிகால் பிரச்சினை — பல இடங்களில் நீர்நிலை</h3>
-                <p class="text-gray-600 text-sm mt-2">Avadi, Madhavaram உள்ளிட்ட பகுதிகளில் சாலைகள், வீடுகள் நீரில் மூழ்கின.</p>
+                <h3 class="font-bold text-lg">Velachery – Perambur பகுதிகளில் நீர்நிலை</h3>
+                <p class="text-sm text-gray-600 mt-2">வடிகால் சீர்கேடு காரணமாக பல சாலைகளில் போக்குவரத்து பாதிப்பு.</p>
             </div>
 
-            <div class="bg-white p-4 shadow rounded hover-scale">
+            <div class="bg-white rounded p-4 shadow hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">விவசாய நிலங்கள் வெள்ளத்தில் மூழ்கின</h3>
-                <p class="text-gray-600 text-sm mt-2">85,000+ ஹெக்டேர் நெல் பயிர்கள் சேதம் — விவசாயிகள் நஷ்டத்தில் உள்ளனர்.</p>
+                <h3 class="font-bold text-lg">நெல் பயிர்கள் சேதம் — விவசாயிகள் கவலை</h3>
+                <p class="text-sm text-gray-600 mt-2">வெள்ளம் காரணமாக Villupuram, Cuddalore பகுதிகளில் பெரும் நாசம்.</p>
             </div>
+
         </div>
     </section>
 
     <!-- CINEMA NEWS -->
     <section id="cinema" class="container mx-auto px-4 mt-10">
+
         <h2 class="text-2xl font-bold text-purple-700 mb-4">🎬 சினிமா செய்திகள்</h2>
 
         <div class="grid md:grid-cols-3 gap-6">
 
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">விஜய் அரசியல் குறிப்பு — ரசிகர்கள் பரபரப்பு</h3>
-                <p class="text-gray-600 text-sm mt-2">தளபதி விஜயின் சமீப பேட்டி Kollywood-ல் பெரும் விவாதத்தை கிளப்பியுள்ளது.</p>
+                <h3 class="font-bold text-lg">விஜய் அரசியல் குறிப்பு வைரல்</h3>
+                <p class="text-sm text-gray-600 mt-2">தளபதி விஜயின் சமீப பேட்டியில் கூறிய கருத்துகள் இணையத்தில் வைரலாகி வருகிறது.</p>
             </div>
 
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">அஜித் AK-64 — Pongal 2026 வெளியீடு உறுதி</h3>
-                <p class="text-gray-600 text-sm mt-2">அஜித் படப்பிடிப்பு 80% முடிந்தது — ரசிகர்கள் கொண்டாட்டம்.</p>
+                <h3 class="font-bold text-lg">அஜித் AK64 – Pongal Release Confirmed</h3>
+                <p class="text-sm text-gray-600 mt-2">படப்பிடிப்பு இறுதி கட்டத்தில் — Pongal 2026ல் வெளியீடு.</p>
             </div>
 
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="text-lg font-bold">சூர்யாவின் “Vaadivaasal” — புதிய போஸ்டர் வைரல்</h3>
-                <p class="text-gray-600 text-sm mt-2">பா.ரஞ்சித் இயக்கத்தில் உருவாகும் படம் — எதிர்பார்ப்பு உச்சத்தில்.</p>
+                <h3 class="font-bold text-lg">சூர்யாவின் Vaadivaasal — புதிய போஸ்டர்</h3>
+                <p class="text-sm text-gray-600 mt-2">பா.ரஞ்சித் இயக்கத்தில் உருவாகும் படம் இணையத்தில் வைரல்.</p>
             </div>
 
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-gray-400 py-8 mt-8">
-        <div class="text-center text-xs mt-8 pt-8 border-t border-gray-800">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 mt-10">
+        <div class="text-xs border-t border-gray-800 pt-8">
             © 2025 AmazeTimes News. All rights reserved.
         </div>
     </footer>
@@ -165,6 +161,7 @@
     document.addEventListener("DOMContentLoaded", () => {
         if (window.lucide) lucide.createIcons();
     });
+
     function toggleMenu() {
         document.getElementById('mobile-menu').classList.toggle('hidden');
     }
