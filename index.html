@@ -16,20 +16,13 @@
 
     <style>
         body { font-family: 'Mukta Malar', sans-serif; background-color: #f3f4f6; }
-
         .breaking-news-anim { animation: marquee 25s linear infinite; }
-
-        @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .hover-scale { transition: transform 0.3s ease; }
+        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .hover-scale { transition: 0.3s ease; }
         .hover-scale:hover { transform: scale(1.02); }
-
         .prgi-badge {
             position: fixed; top: 8px; right: 10px; background: #000; color: #fff;
-            padding: 4px 10px; border-radius: 6px; font-weight: bold; font-size: 11px; z-index: 9999;
+            padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; z-index: 9999;
         }
     </style>
 </head>
@@ -41,7 +34,7 @@
 
     <!-- Top Bar -->
     <div class="bg-gray-900 text-white text-xs py-2 px-4 flex justify-between">
-        <div>வெள்ளி, 06 டிசம்பர் 2025 | காலை 9:20</div>
+        <div>வெள்ளி, 06 டிசம்பர் 2025 | காலை 9:30</div>
         <div class="flex space-x-4">
             <a href="#" class="hover:text-red-400">தொடர்புக்கு</a>
             <a href="#" class="hover:text-red-400">விளம்பரம்</a>
@@ -60,10 +53,6 @@
                     <p class="text-sm text-gray-500">உண்மை உடனுக்குடன்</p>
                 </div>
             </div>
-
-            <button class="md:hidden text-gray-700" onclick="toggleMenu()">
-                <i data-lucide="menu" class="w-8 h-8"></i>
-            </button>
 
             <nav class="hidden md:flex space-x-6 font-bold text-gray-700">
                 <a href="#" class="text-red-600">முகப்பு</a>
@@ -84,39 +73,39 @@
         <div class="relative flex-1 overflow-hidden">
             <div class="breaking-news-anim absolute whitespace-nowrap pl-4 text-sm font-medium">
 
-                🌧️ சென்னை, திருவள்ளூர், காஞ்சி: பள்ளிகள் இன்று மூடப்பட்டது  
+                🌧️ சென்னை, திருவள்ளூர், காஞ்சி — பள்ளிகள் இன்று மூடப்பட்டது  
                 🚨 Cyclone Ditwah — பல இடங்களில் இன்னும் நீர்நிலை  
-                🌾 1.1 லட்சம் ஹெக்டேர் நெல் பயிர்கள் பாதிப்பு  
-                ⚡ TANGEDCO: மின்சாரம் மீட்பு பணி வேகத்தில்  
-                🎬 விஜய் அரசியல் குறிப்பு வைரல் | அஜித் AK64 Pongal release confirmed  
+                🌾 1.02 லட்சம் ஹெக்டேர் நெல் பயிர்கள் வெள்ளத்தில் நாசம்  
+                ⚡ மின்சாரம் மீட்பு பணி வேகத்தில்: TANGEDCO  
+                🎬 அஜித் AK64 Pongal release confirmed | விஜய் அரசியல் குறிப்பு வைரல்  
 
             </div>
         </div>
     </div>
 
-    <!-- Tamil Nadu Section -->
+    <!-- Tamil Nadu News -->
     <section id="tn" class="container mx-auto px-4 mt-6">
-        
+
         <h2 class="text-2xl font-bold text-red-700 mb-4">தமிழ்நாடு செய்திகள்</h2>
 
         <div class="grid md:grid-cols-3 gap-6">
 
             <div class="bg-white rounded p-4 shadow hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="font-bold text-lg">சென்னையில் பள்ளிகள் இன்று மூடப்பட்டது</h3>
-                <p class="text-sm text-gray-600 mt-2">கனமழை காரணமாக மாணவர்களின் பாதுகாப்பை கருத்தில் கொண்டு பள்ளிகள் மூட உத்தரவு.</p>
+                <h3 class="font-bold text-lg">சென்னையில் இன்று பள்ளிகள் மூடப்பட்டது</h3>
+                <p class="text-sm text-gray-600 mt-2">கனமழை எச்சரிக்கை காரணமாக 3 மாவட்டங்களில் பள்ளிகள் இன்று மூடப்பட்டன.</p>
             </div>
 
             <div class="bg-white rounded p-4 shadow hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="font-bold text-lg">Velachery – Perambur பகுதிகளில் நீர்நிலை</h3>
-                <p class="text-sm text-gray-600 mt-2">வடிகால் சீர்கேடு காரணமாக பல சாலைகளில் போக்குவரத்து பாதிப்பு.</p>
+                <h3 class="font-bold text-lg">Cyclone Ditwah — பல இடங்களில் நீர்நிலை</h3>
+                <p class="text-sm text-gray-600 mt-2">Velachery, Perambur போன்ற இடங்களில் நீர் தேக்கம் தொடர்கிறது.</p>
             </div>
 
             <div class="bg-white rounded p-4 shadow hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="font-bold text-lg">நெல் பயிர்கள் சேதம் — விவசாயிகள் கவலை</h3>
-                <p class="text-sm text-gray-600 mt-2">வெள்ளம் காரணமாக Villupuram, Cuddalore பகுதிகளில் பெரும் நாசம்.</p>
+                <h3 class="font-bold text-lg">நெல் பயிர்களில் பெரும் சேதம்</h3>
+                <p class="text-sm text-gray-600 mt-2">Villupuram மற்றும் Cuddalore பகுதிகளில் 1.02 லட்சம் ஹெக்டேர் பயிர் சேதம்.</p>
             </div>
 
         </div>
@@ -131,20 +120,20 @@
 
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="font-bold text-lg">விஜய் அரசியல் குறிப்பு வைரல்</h3>
-                <p class="text-sm text-gray-600 mt-2">தளபதி விஜயின் சமீப பேட்டியில் கூறிய கருத்துகள் இணையத்தில் வைரலாகி வருகிறது.</p>
-            </div>
-
-            <div class="bg-white p-4 shadow rounded hover-scale">
-                <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
                 <h3 class="font-bold text-lg">அஜித் AK64 – Pongal Release Confirmed</h3>
-                <p class="text-sm text-gray-600 mt-2">படப்பிடிப்பு இறுதி கட்டத்தில் — Pongal 2026ல் வெளியீடு.</p>
+                <p class="text-sm text-gray-600 mt-2">படப்பிடிப்பு இறுதிக்கட்டத்தை எட்டியது. Pongal 2026ல் release உறுதி.</p>
             </div>
 
             <div class="bg-white p-4 shadow rounded hover-scale">
                 <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
-                <h3 class="font-bold text-lg">சூர்யாவின் Vaadivaasal — புதிய போஸ்டர்</h3>
-                <p class="text-sm text-gray-600 mt-2">பா.ரஞ்சித் இயக்கத்தில் உருவாகும் படம் இணையத்தில் வைரல்.</p>
+                <h3 class="font-bold text-lg">விஜய் அரசியல் குறிப்பு இணையத்தில் வைரல்</h3>
+                <p class="text-sm text-gray-600 mt-2">தளபதி விஜயின் பேட்டி கருத்துகள் டிரெண்டிங்கில்.</p>
+            </div>
+
+            <div class="bg-white p-4 shadow rounded hover-scale">
+                <img src="https://via.placeholder.com/400x250" class="rounded mb-3">
+                <h3 class="font-bold text-lg">சூர்யா 'Vaadivaasal' புதிய போஸ்டர்</h3>
+                <p class="text-sm text-gray-600 mt-2">பா.ரஞ்சித் இயக்கத்தில் உருவாகும் படத்தின் புதிய போஸ்டர் வைரல்.</p>
             </div>
 
         </div>
@@ -156,16 +145,6 @@
             © 2025 AmazeTimes News. All rights reserved.
         </div>
     </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        if (window.lucide) lucide.createIcons();
-    });
-
-    function toggleMenu() {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-    }
-</script>
 
 </body>
 </html>
