@@ -1,0 +1,116 @@
+{
+  "site": {
+    "name": "AmazeTimes",
+    "url": "https://amazetimes.in",
+    "description": "தமிழ் செய்திகளின் நம்பகமான மூலாதாரம் | Trusted Source of Tamil News",
+    "language": "ta-IN",
+    "tagline": "உண்மை உடனுக்குடன்",
+    "author": "VitalizePay",
+    "prgiNumber": "TNBIL/2023/88659"
+  },
+  "categories": [
+    {
+      "id": "tn",
+      "name": "தமிழ்நாடு",
+      "name_en": "Tamil Nadu",
+      "icon": "📍",
+      "color": "#fee2e2",
+      "textColor": "#991b1b"
+    },
+    {
+      "id": "cinema",
+      "name": "சினிமா",
+      "name_en": "Cinema",
+      "icon": "🎬",
+      "color": "#fce7f3",
+      "textColor": "#831843"
+    },
+    {
+      "id": "india",
+      "name": "இந்தியா",
+      "name_en": "India",
+      "icon": "🇮🇳",
+      "color": "#fef3c7",
+      "textColor": "#78350f"
+    },
+    {
+      "id": "politics",
+      "name": "அரசியல்",
+      "name_en": "Politics",
+      "icon": "🏛️",
+      "color": "#dbeafe",
+      "textColor": "#1e40af"
+    },
+    {
+      "id": "sports",
+      "name": "விளையாட்டு",
+      "name_en": "Sports",
+      "icon": "⚽",
+      "color": "#dcfce7",
+      "textColor": "#166534"
+    }
+  ],
+  "typography": {
+    "primary_font": "Mukta Malar",
+    "font_weights": {
+      "light": 200,
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    }
+  },
+  "colors": {
+    "primary": "#dc2626",
+    "primary_dark": "#991b1b",
+    "primary_light": "#fee2e2",
+    "secondary": "#111827",
+    "text": "#333333",
+    "text_light": "#666666",
+    "text_lighter": "#999999",
+    "background": "#f3f4f6",
+    "white": "#ffffff",
+    "border": "#e5e7eb"
+  },
+  "social_media": {
+    "facebook": "https://facebook.com/amazetimes",
+    "twitter": "https://twitter.com/amazetimes",
+    "instagram": "https://instagram.com/amazetimes",
+    "youtube": "https://youtube.com/@amazetimes"
+  },
+  "contact": {
+    "email": "info@amazetimes.in",
+    "phone": "+91-XXXX-XXXX-XXXX",
+    "address": "Tamil Nadu, India"
+  },
+  "analytics": {
+    "enabled": false,
+    "google_analytics_id": "G-XXXXXXXXXX",
+    "facebook_pixel_id": "XXXXXXXXX"
+  },
+  "seo": {
+    "title": "AmazeTimes - தமிழ் செய்திகள் | Tamil News",
+    "description": "அமேசு டைம்ஸ் - தமிழ் செய்திகளின் நம்பகமான மூலாதாரம்। தமிழ்நாடு, சினிமா, இந்தியா, அரசியல், விளையாட்டு செய்திகள்।",
+    "keywords": "தமிழ் செய்திகள், Tamil News, Tamil Nadu News, Cinema News, India News",
+    "og_image": "https://via.placeholder.com/1200x630?text=AmazeTimes",
+    "author": "VitalizePay"
+  },
+  "features": {
+    "breaking_news": true,
+    "search": true,
+    "categories": true,
+    "sharing": true,
+    "comments": false,
+    "dark_mode": false,
+    "push_notifications": false
+  },
+  "performance": {
+    "image_optimization": true,
+    "lazy_loading": true,
+    "caching": true,
+    "compression": true
+  },
+  "version": "1.0.0",
+  "last_updated": "2025-12-06"
+}
