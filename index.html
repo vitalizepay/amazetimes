@@ -1,412 +1,164 @@
 <!DOCTYPE html>
 <html lang="ta">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="அமேசு டைம்ஸ் - தமிழ் செய்திகளின் நம்பகமான மூலாதாரம்। தமிழ்நாடு, சினிமா, இந்தியா, அரசியல், விளையாட்டு செய்திகள்।">
-    <meta name="keywords" content="தமிழ் செய்திகள், Tamil News, Tamil Nadu News, Cinema News">
-    <title>AmazeTimes - அமேஸ் டைம்ஸ் | தமிழ் செய்திகள்</title>
-
+    <meta name="description" content="AmazeTimes - Latest Tamil News">
+    <meta name="keywords" content="Tamil News, தமிழ் செய்திகள், Tamil Nadu, Cinema, India, Politics, Sports">
     <link rel="icon" type="image/png" href="logo-favicon.png">
+    <title>AmazeTimes - தமிழ் செய்திகள்</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        body { font-family: 'Mukta Malar', sans-serif; background-color: #f3f4f6; }
-        .breaking-news-anim { animation: marquee 25s linear infinite; }
-        @keyframes marquee { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
-        .hover-scale { transition: 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.02); }
-        .prgi-badge {
-            position: fixed; top: 8px; right: 10px; background: #000; color: #fff;
-            padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; z-index: 9999;
-        }
-        .news-card {
-            cursor: pointer;
-            overflow: hidden;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .news-card img { transition: transform 0.3s ease; }
-        .news-card:hover img { transform: scale(1.05); }
-        .category-badge {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        .category-tn { background: #fee2e2; color: #991b1b; }
-        .category-cinema { background: #fce7f3; color: #831843; }
-        .category-india { background: #fef3c7; color: #78350f; }
-        .category-politics { background: #dbeafe; color: #1e40af; }
-        .category-sports { background: #dcfce7; color: #166534; }
-        .grid-responsive {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .search-box {
-            background: white;
-            border-radius: 30px;
-            padding: 8px 16px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .search-box input {
-            border: none;
-            outline: none;
-            flex: 1;
-            padding: 8px;
-        }
-        @media (max-width: 768px) {
-            .grid-responsive { grid-template-columns: 1fr; }
-            nav { flex-direction: column; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body class="flex flex-col min-h-screen">
-
-    <!-- PRGI Badge -->
-    <div class="prgi-badge">PRGI NO: TNBIL/2023/88659</div>
-
-    <!-- Top Bar -->
-    <div class="bg-gray-900 text-white text-xs py-2 px-4 flex justify-between items-center flex-wrap gap-4">
-        <div id="current-date">வெள்ளி, 06 டிசம்பர் 2025 | காலை 9:45</div>
-        <div class="flex space-x-4 flex-wrap">
-            <a href="#" class="hover:text-red-400 transition">தொடர்புக்கு</a>
-            <a href="#" class="hover:text-red-400 transition">விளம்பரம்</a>
-            <a href="#" class="hover:text-red-400 transition">English</a>
-        </div>
-    </div>
-
+<body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div class=\"flex items-center gap-3\">
-                    <div class=\"w-14 h-14 flex items-center justify-center\">
-                        <img src=\"logo-header.png\" alt=\"AmazeTimes Logo\" class=\"w-full h-full object-contain\">
-                    </div>
-                    <div>
-                        <h1 class=\"text-3xl font-extrabold text-red-700 leading-none\">AmazeTimes</h1>
-                        <p class=\"text-sm text-gray-500 font-medium\">உண்மை உடனுக்குடன்</p>
-                    </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                    <img src="logo-header.png" alt="AmazeTimes Logo" class="h-12 w-12 rounded-full shadow">
+                    <h1 class="text-3xl font-bold text-red-600">AmazeTimes</h1>
                 </div>
+                <button id="menuBtn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
 
-                <nav class="hidden md:flex space-x-6 font-bold text-gray-700">
-                    <a href="#home" class="text-red-600 transition">முகப்பு</a>
-                    <a href="#tn" class="hover:text-red-600 transition">தமிழ்நாடு</a>
-                    <a href="#cinema" class="hover:text-red-600 transition">சினிமா</a>
-                    <a href="#india" class="hover:text-red-600 transition">இந்தியா</a>
-                    <a href="#politics" class="hover:text-red-600 transition">அரசியல்</a>
-                    <a href="#sports" class="hover:text-red-600 transition">விளையாட்டு</a>
-                </nav>
+            <!-- Navigation -->
+            <nav class="flex flex-wrap gap-2 md:gap-4" id="navMenu">
+                <button class="category-filter px-4 py-2 rounded-lg font-medium text-sm md:text-base transition hover:bg-red-50" data-category="all">
+                    <i class="fas fa-home mr-2"></i>முகப்பு
+                </button>
+                <button class="category-filter px-4 py-2 rounded-lg font-medium text-sm md:text-base transition hover:bg-red-50" data-category="tamil-nadu">
+                    <i class="fas fa-map-marker-alt mr-2"></i>தமிழ்நாடு
+                </button>
+                <button class="category-filter px-4 py-2 rounded-lg font-medium text-sm md:text-base transition hover:bg-red-50" data-category="cinema">
+                    <i class="fas fa-film mr-2"></i>சினிமா
+                </button>
+                <button class="category-filter px-4 py-2 rounded-lg font-medium text-sm md:text-base transition hover:bg-red-50" data-category="india">
+                    <i class="fas fa-flag mr-2"></i>இந்தியா
+                </button>
+                <button class="category-filter px-4 py-2 rounded-lg font-medium text-sm md:text-base transition hover:bg-red-50" data-category="politics">
+                    <i class="fas fa-landmark mr-2"></i>அரசியல்
+                </button>
+                <button class="category-filter px-4 py-2 rounded-lg font-medium text-sm md:text-base transition hover:bg-red-50" data-category="sports">
+                    <i class="fas fa-trophy mr-2"></i>விளையாட்டு
+                </button>
+            </nav>
 
-                <div class="w-full md:w-auto search-box">
-                    <input type="text" id="search-input" placeholder="செய்திகளைத் தேடுக...">
-                    <button onclick="searchNews()" style="background: none; border: none; cursor: pointer; color: #666;">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
+            <!-- Search Bar -->
+            <div class="mt-4">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="செய்திகள் தேடুக..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <button id="searchBtn" class="absolute right-3 top-2 text-gray-400 hover:text-red-600">
+                        <i class="fas fa-search text-lg"></i>
                     </button>
                 </div>
+            </div>
+
+            <!-- Date & Time -->
+            <div class="mt-3 text-center text-sm text-gray-600">
+                <span id="dateTime">Loading...</span>
             </div>
         </div>
     </header>
 
-    <!-- Breaking News -->
-    <div class="bg-red-600 text-white flex items-center overflow-hidden h-10">
-        <div class="bg-red-800 px-4 py-2 font-bold whitespace-nowrap shadow-lg">முக்கிய செய்திகள்</div>
-
-        <div class="flex-1 overflow-hidden relative h-full flex items-center">
-            <div class="whitespace-nowrap breaking-news-anim absolute pl-4 text-sm font-medium">
-
-                🌧️ சென்னை, திருவள்ளூர், காஞ்சி – இன்று பள்ளிகள் மூடப்பட்டது  
-                🚨 Cyclone Ditwah — வடசென்னையில் நீர்நிலை  
-                🌾 95,000 ஹெக்டேர் நெல் பயிர்கள் வெள்ளத்தில் நாசம்  
-                ✈️ Chennai Airport: 32 flights delayed  
-                🎬 அஜித் AK64 Pongal release confirmed | விஜய் அரசியல் குறிப்பு வைரல் | Vaadivaasal போஸ்டர் வைரல்  
-
+    <!-- Breaking News Ticker -->
+    <div class="bg-red-600 text-white py-2 overflow-hidden">
+        <div class="flex items-center gap-3">
+            <span class="font-bold whitespace-nowrap ml-4 animate-pulse">🔴 முக்கிய செய்தி</span>
+            <div class="flex-1 overflow-hidden">
+                <div class="marquee-content text-sm md:text-base">
+                    <span id="breakingNews">Loading latest news...</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Tamil Nadu News -->
-    <section id="tn" class="container mx-auto px-4 mt-6">
-        <h2 class="text-2xl font-bold text-red-700 mb-4">தமிழ்நாடு செய்திகள்</h2>
-        <div class="grid-responsive">
-            <div class="news-card p-4">
-                <img src="images/tamil-nadu-rain.jpg" alt="Chennai Rain" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-tn">தமிழ்நாடு</span>
-                    <h3 class="text-lg font-bold">சென்னை, காஞ்சி, திருவள்ளூர் – பள்ளிகள் மூடப்பட்டது</h3>
-                    <p class="text-gray-600 text-sm mt-2">கனமழை எச்சரிக்கை காரணமாக மாவட்ட நிர்வாகம் விடுமுறை அறிவித்தது.</p>
-                    <p class="text-gray-400 text-xs mt-2">2 மணி நேரம் முன்</p>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- News Grid -->
+        <div class="news-grid" id="newsContainer">
+            <!-- Articles will be loaded here by JavaScript -->
+        </div>
 
-            <div class="news-card p-4">
-                <img src="images/tamil-nadu-cyclone.jpg" alt="Cyclone Warning" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-tn">தமிழ்நாடு</span>
-                    <h3 class="text-lg font-bold">Cyclone Ditwah – வடசென்னையில் நீர்நிலை</h3>
-                    <p class="text-gray-600 text-sm mt-2">வேளச்சேரி, கொளத்தூர் பகுதிகளில் நீர் தேக்கம் தொடர்கிறது.</p>
-                    <p class="text-gray-400 text-xs mt-2">4 மணி நேரம் முன்</p>
-                </div>
-            </div>
+        <!-- No Results Message -->
+        <div id="noResults" class="hidden text-center py-12">
+            <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500 text-xl">செய்திகள் கண்டுபிடிக்கப்படவில்லை</p>
+        </div>
+    </main>
 
-            <div class="news-card p-4">
-                <img src="images/tamil-nadu-agriculture.jpg" alt="Crop Damage" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-tn">தமிழ்நாடு</span>
-                    <h3 class="text-lg font-bold">Villupuram – நெல் பயிர்களில் பெரும் சேதம்</h3>
-                    <p class="text-gray-600 text-sm mt-2">95,000 ஹெக்டேர் பயிர்கள் வெள்ளத்தில் கரைந்தன.</p>
-                    <p class="text-gray-400 text-xs mt-2">6 மணி நேரம் முன்</p>
+    <!-- News Modal -->
+    <div id="newsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span id="modalCategory" class="px-3 py-1 rounded-full text-white text-sm font-medium"></span>
+                    <span id="modalTime" class="text-gray-500 text-sm flex items-center">
+                        <i class="fas fa-clock mr-2"></i><span></span>
+                    </span>
+                </div>
+                <p id="modalContent" class="text-gray-700 leading-relaxed text-lg"></p>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <button class="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition">
+                        மূல செய்திக்குச் செல்க
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- CINEMA NEWS -->
-    <section id="cinema" class="container mx-auto px-4 mt-10">
-        <h2 class="text-2xl font-bold text-purple-700 mb-4">🎬 சினிமா செய்திகள்</h2>
-        <div class="grid-responsive">
-            <div class="news-card p-4">
-                <img src="images/cinema-movie.jpg" alt="Movie Film" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-cinema">சினிமா</span>
-                    <h3 class="text-lg font-bold">அஜித் AK64 – Pongal Release Confirmed</h3>
-                    <p class="text-gray-600 text-sm mt-2">படப்பிடிப்பு இறுதி கட்டத்தில் — Pongal 2026 release almost confirmed.</p>
-                    <p class="text-gray-400 text-xs mt-2">1 மணி நேரம் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/cinema-actors.jpg" alt="Cinema News" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-cinema">சினிமா</span>
-                    <h3 class="text-lg font-bold">விஜய் அரசியல் குறிப்பு வைரல்</h3>
-                    <p class="text-gray-600 text-sm mt-2">தளபதி விஜயின் புதிய பேட்டி சமூக வலைத்தளங்களில் வைரலாகி வருகிறது.</p>
-                    <p class="text-gray-400 text-xs mt-2">3 மணி நேரம் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/cinema-poster.jpg" alt="Cinema Poster" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-cinema">சினிமா</span>
-                    <h3 class="text-lg font-bold">சூர்யா – Vaadivaasal போஸ்டர் வைரல்</h3>
-                    <p class="text-gray-600 text-sm mt-2">பா.ரஞ்சித் இயக்கத்தில் உருவாகும் Vaadivaasal படத்தின் புதிய போஸ்டர் வைரல்.</p>
-                    <p class="text-gray-400 text-xs mt-2">5 மணி நேரம் முன்</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INDIA NEWS -->
-    <section id="india" class="container mx-auto px-4 mt-10">
-        <h2 class="text-2xl font-bold text-yellow-700 mb-4">🇮🇳 இந்தியா செய்திகள்</h2>
-        <div class="grid-responsive">
-            <div class="news-card p-4">
-                <img src="images/india-weather.jpg" alt="Weather Storm" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-india">இந்தியா</span>
-                    <h3 class="text-lg font-bold">வடக்கு இந்தியாவில் மழை தீவிரம்</h3>
-                    <p class="text-gray-600 text-sm mt-2">டெல்லி, இউபி, பஞ்சாப் பகுதிகளில் கனமழையுடன் ஆவேசம் எச்சரிக்கை</p>
-                    <p class="text-gray-400 text-xs mt-2">30 நிமிடங்கள் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/india-economy.jpg" alt="Business Finance" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-india">இந்தியா</span>
-                    <h3 class="text-lg font-bold">இந்தியா பொருளாதாரம் 5% வளர்ச்சி</h3>
-                    <p class="text-gray-600 text-sm mt-2">2024 ஆண்டு வளர்ச்சி விகிதம் 5.4% என்று மத்திய அரசு அறிவித்தது</p>
-                    <p class="text-gray-400 text-xs mt-2">1 மணி நேரம் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/india-cricket.jpg" alt="Cricket Match" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-india">இந்தியா</span>
-                    <h3 class="text-lg font-bold">இந்தியா அணி T20 தொடரில் வெற்றி</h3>
-                    <p class="text-gray-600 text-sm mt-2">முதல் ஆட்டத்தில் இந்தியா 8 விக்கெட்ட வித்தியாசத்தில் வெற்றி பெற்றது</p>
-                    <p class="text-gray-400 text-xs mt-2">3 மணி நேரம் முன்</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- POLITICS NEWS -->
-    <section id="politics" class="container mx-auto px-4 mt-10">
-        <h2 class="text-2xl font-bold text-blue-700 mb-4">🏛️ அரசியல் செய்திகள்</h2>
-        <div class="grid-responsive">
-            <div class="news-card p-4">
-                <img src="images/politics-government.jpg" alt="Politics Government" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-politics">அரசியல்</span>
-                    <h3 class="text-lg font-bold">தமிழ்நாடு அரசு புதிய திட்டம் அறிவிப்பு</h3>
-                    <p class="text-gray-600 text-sm mt-2">முதல்வர் பசவராஜ் பொம்மி புதிய மக்கள் உதவித் திட்டம் அறிவித்தார்</p>
-                    <p class="text-gray-400 text-xs mt-2">45 நிமிடங்கள் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/politics-parliament.jpg" alt="Parliament Assembly" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-politics">அரசியல்</span>
-                    <h3 class="text-lg font-bold">பாராளுமன்றத்தில் பணி வெடிப்பு</h3>
-                    <p class="text-gray-600 text-sm mt-2">முக்கியமான ஆர்பிலில் பாராளுமன்றக் கூட்டம் பணியற்றது</p>
-                    <p class="text-gray-400 text-xs mt-2">2 மணி நேரம் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/politics-elections.jpg" alt="Elections Voting" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-politics">அரசியல்</span>
-                    <h3 class="text-lg font-bold">நகர கவுன்சிल் தேர்தல் நாட்கள் அதிகரிக்கப்பட்டது</h3>
-                    <p class="text-gray-600 text-sm mt-2">நகர கவுன்சிலுக்கான தேர்தல் நாட்கள் 3 நாட்களில் இருந்து 5 நாட்களாக விரிவுபடுத்தப்பட்டது</p>
-                    <p class="text-gray-400 text-xs mt-2">4 மணி நேரம் முன்</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SPORTS NEWS -->
-    <section id="sports" class="container mx-auto px-4 mt-10 mb-10">
-        <h2 class="text-2xl font-bold text-green-700 mb-4">⚽ விளையாட்டு செய்திகள்</h2>
-        <div class="grid-responsive">
-            <div class="news-card p-4">
-                <img src="images/sports-cricket.jpg" alt="Cricket Team" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-sports">விளையாட்டு</span>
-                    <h3 class="text-lg font-bold">ஐபிஎல் 2026 அணி அறிவிப்பு</h3>
-                    <p class="text-gray-600 text-sm mt-2">ஐபிএல் 2026-ல் பெங்களூரு அணி விஸ்வ குமாரைக் கேப்டன் ஆக்கியது</p>
-                    <p class="text-gray-400 text-xs mt-2">50 நிமிடங்கள் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/sports-tennis.jpg" alt="Tennis Court" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-sports">விளையாட்டு</span>
-                    <h3 class="text-lg font-bold">சைனா ওபன் டெனிஸ் ஆட்டத்தில் சாக்கிரி வெற்றி</h3>
-                    <p class="text-gray-600 text-sm mt-2">சைனா ஓபன் டெனிஸ் ஆட்டத்தில் சாக்கிரி தெலுங்கை ஓ கிளாரி ஜெயம்</p>
-                    <p class="text-gray-400 text-xs mt-2">1 மணி நேரம் முன்</p>
-                </div>
-            </div>
-
-            <div class="news-card p-4">
-                <img src="images/sports-hockey.jpg" alt="Hockey Sports" class="rounded mb-3 w-full h-48 object-cover">
-                <div>
-                    <span class="category-badge category-sports">விளையாட்டு</span>
-                    <h3 class="text-lg font-bold">இந்திய ஹாக்கி அணி ஐ எச்.சி கோல்ட் மெடல்</h3>
-                    <p class="text-gray-600 text-sm mt-2">இந்திய பெண்கள் ஹாக்கி அணி ஐ.எச்.சி. விளையாட்டுகளில் தங்கப் பதக்கம் வென்றது</p>
-                    <p class="text-gray-400 text-xs mt-2">2 மணி நேரம் முன்</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 mt-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 pb-8 border-b border-gray-800">
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-white font-bold mb-4">அமேஸு டைம்ஸ் பற்றி</h3>
-                    <p class="text-sm">அமேஸு டைம்ஸ் தமிழ் செய்திகளின் முதன்மை மூலாதாரமாகும். நாங்கள் நம்பகமான, தகுந்த செய்திகளை வழங்கிக் கொண்டிருக்கிறோம்.</p>
+                    <h3 class="text-xl font-bold mb-4">AmazeTimes</h3>
+                    <p class="text-gray-400">தமிழ்நாடு, இந்தியா மற்றும் உலகத்தின் சிறந்த செய்திகள்</p>
                 </div>
                 <div>
-                    <h3 class="text-white font-bold mb-4">செய்திகளின் பிரிவுகள்</h3>
-                    <ul class="text-sm space-y-2">
-                        <li><a href="#tn" class="hover:text-red-500">தமிழ்நாடு</a></li>
-                        <li><a href="#cinema" class="hover:text-red-500">சினிமா</a></li>
-                        <li><a href="#india" class="hover:text-red-500">இந்தியா</a></li>
-                        <li><a href="#politics" class="hover:text-red-500">அரசியல்</a></li>
-                        <li><a href="#sports" class="hover:text-red-500">விளையாட்டு</a></li>
+                    <h4 class="font-bold mb-4">வகைகள்</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><a href="#" class="hover:text-white">தமிழ்நாடு</a></li>
+                        <li><a href="#" class="hover:text-white">சினிமா</a></li>
+                        <li><a href="#" class="hover:text-white">இந்தியா</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-white font-bold mb-4">கொள்கைகள்</h3>
-                    <ul class="text-sm space-y-2">
-                        <li><a href="#" class="hover:text-red-500">பயனுரிமை கொள்கை</a></li>
-                        <li><a href="#" class="hover:text-red-500">விதிமுறைகள்</a></li>
-                        <li><a href="#" class="hover:text-red-500">பொறுப்பாகாது</a></li>
-                        <li><a href="#" class="hover:text-red-500">தொடர்பு</a></li>
+                    <h4 class="font-bold mb-4">கணக்கு</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><a href="#" class="hover:text-white">தொடர்பு</a></li>
+                        <li><a href="#" class="hover:text-white">பற்றி</a></li>
+                        <li><a href="#" class="hover:text-white">விதிமுறைகள்</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-white font-bold mb-4">பின்தொடர் நம்மை</h3>
+                    <h4 class="font-bold mb-4">பின்தொடரவும்</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:text-red-500 transition">Facebook</a>
-                        <a href="#" class="hover:text-red-500 transition">Twitter</a>
-                        <a href="#" class="hover:text-red-500 transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="text-center text-xs pt-8">
-                <p>&copy; 2025 அமேஸு டைம்ஸ். எல்லா உரிமைகளும் பாதுகாக்கப்பட்டுள்ளன.</p>
-                <p class="text-gray-500 mt-2">PRGI NO: TNBIL/2023/88659</p>
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-400 text-sm text-center">
+                    &copy; 2024 AmazeTimes. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டுள்ளன.
+                    <br>PRGI Registration: TNBIL/2023/88659
+                </p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Update current date and time
-        function updateDateTime() {
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-            const now = new Date();
-            const dateStr = now.toLocaleDateString('ta-IN', options);
-            document.getElementById('current-date').textContent = dateStr;
-        }
-
-        // Search functionality
-        function searchNews() {
-            const query = document.getElementById('search-input').value;
-            if (query.trim() !== '') {
-                alert('தேடப்பட்டது: ' + query);
-                // Future: Implement actual search functionality
-            }
-        }
-
-        // Handle Enter key in search
-        document.getElementById('search-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchNews();
-            }
-        });
-
-        // Update date/time on page load
-        updateDateTime();
-        setInterval(updateDateTime, 60000);
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>

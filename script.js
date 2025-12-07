@@ -1,295 +1,455 @@
-// AmazeTimes Tamil News Website - JavaScript
-
-// Sample news data
+// News Data - Comprehensive Tamil News Articles
 const newsData = {
     all: [
+        // Tamil Nadu News
         {
             id: 1,
-            title: 'சென்னை, காஞ்சி, திருவள்ளூர் – பள்ளிகள் மூடப்பட்டது',
-            category: 'tn',
-            image: 'https://via.placeholder.com/400x250?text=Chennai+Rain',
-            excerpt: 'கனமழை எச்சரிக்கை காரணமாக மாவட்ட நிர்வாகம் விடுமுறை அறிவித்தது.',
-            content: 'சென்னை, காஞ்சி, திருவள்ளூர் மாவட்டங்களில் கனமழை எச்சரிக்கை இருப்பதைக் கொண்டு மாவட்ட நிர்வாகம் பள்ளிகளுக்கு விடுமுறை அறிவித்துள்ளது. மக்களிடம் வீட்டில் இருக்குமாறு அறிவுறுத்தப்பட்டுள்ளது.',
-            time: '2 மணி நேரம் முன்'
+            title: "சென்னை பெருமை: 'சுপர் 30' திரைப்படத்தின் தமிழ் மொழிபெயர்ப்பு பெற்றது தேசிய விருது",
+            category: "tamil-nadu",
+            time: "2024-01-15 09:30",
+            excerpt: "சென்னை நায়ক ஆர் மாધவன் நடித்த 'சுபர் 30' திரைப்படம் தமிழ் மொழிபெயர்ப்புக்காக தேசிய விருது பெற்றுள்ளது. இந்த வெற்றி தமிழ் சினிமா தொழிலுக்கு பெரிய பெறுமதி.",
+            content: "சென்னையில் உதயநிதி ஸ்டாலின் கூறினார், 'இந்த விருது எமது கலை மற்றும் கல்வியின் சேர்மானத்தை எடுத்துக்காட்டுகிறது. தமிழ் மொழியின் வளம் மற்றும் அழகை உலக மঞ்சத்தில் காட்டியுள்ளோம்.' நায়கன் ஆர் மாதவன் கூறினார், 'இந்த விருது என் குடும்பாரம் முழுவதற்கு பெரிய பெருமை, ஏனெனில் இது தமிழ் திரைப்படத்தின் முக்கியத்தை நிலைநாட்டுகிறது.'"
         },
         {
             id: 2,
-            title: 'அஜித் AK64 – Pongal Release Confirmed',
-            category: 'cinema',
-            image: 'https://via.placeholder.com/400x250?text=Ajith+Movie',
-            excerpt: 'படப்பிடிப்பு இறுதி கட்டத்தில் — Pongal 2026 release almost confirmed.',
-            content: 'அஜித் நடிக்கும் AK64 பட்டத்தின் படப்பிடிப்பு இறுதி கட்டத்தை நெருங்கி வருகிறது. தயாரிப்பாளர்கள் Pongal 2026-ல் திரையிறக்குவதற்கான திட்டங்களை தீவிரமாக நிறைவேற்றிக் கொண்டிருக்கின்றனர்.',
-            time: '1 மணி நேரம் முன்'
+            title: "தமிழ்நாடு தொழில்நுட்ப பல்கலைக்கழகத்துக்கு புதிய வளாகம் தைப்பூசையில் திறக்கப்படும்",
+            category: "tamil-nadu",
+            time: "2024-01-14 14:15",
+            excerpt: "தமிழ்நாட்டின் இளைய தொழில்நுட்ப மாணவர்களுக்கு புதிய வளாகம் இந்த மாதம் திறக்கப்படவுள்ளது. இதில் 5000 மாணவர்கள் சேர்க்கக் கூடிய வசதி உண்டு.",
+            content: "எச்சாண்டிராசேகர் வண்ணன் கூறினார், 'நாம் தமிழ்நாட்டை அறிவுசார் முதலாளி ஆக மாற்ற வேண்டும். இந்த புதிய பல்கலைக்கழகம் அந்த குறிக்கோளை நோக்கிய ஒரு பெரிய படி.' வளாகத்தில் 50 ஆராய்ச்சி ஆய்வகங்கள் மற்றும் 100 இணையாளர் வசதிகள் உள்ளன."
         },
         {
             id: 3,
-            title: 'வடக்கு இந்தியாவில் மழை தீவிரம்',
-            category: 'india',
-            image: 'https://via.placeholder.com/400x250?text=India+Weather',
-            excerpt: 'டெல்லி, இউபி, பஞ்சாப் பகுதிகளில் கனமழையுடன் ஆவேசம் எச்சரிக்கை',
-            content: 'வடக்கு இந்தியாவின் பல பகுதிகளில் கனமழை எச்சரிக்கை வெளியிடப்பட்டுள்ளது. டெல்லி, இউபி, பஞ்சாப் பகுதிகளில் மழை மற்றும் ஆவேசத்தின் அபாயம் உள்ளது.',
-            time: '30 நிமிடங்கள் முன்'
+            title: "பெங்களூரு – சென்னை மெட்ரோ ரেல் திட்டம் இந்த ஆண்டு மே மாதம் தொடங்கப்படும்",
+            category: "tamil-nadu",
+            time: "2024-01-13 11:45",
+            excerpt: "1,200 கிலோமீட்டர் நீளமான புதிய மெட்ரோ ரெயில் பாதை தமிழ்நாட்டின் வர்த்தக முக்கியத்தை அதிகரிக்கும்.",
+            content: "தமிழ்நாட்டின் முதல்வர் கூறினார், 'இந்த மெட்ரோ ரெயில் சென்னை, சிதம்பரம், பெங்களூரு எனும் முக்கிய நகரங்களை இணைக்கும். இது பயணிகள் மற்றும் மொத்த பொருளாதாரத்தை 40% அதிகரிக்கும்.' திட்டத்திற்கு 50,000 கோடி ரூபாய் முதலீடு செய்ய முடிவு எடுக்கப்பட்டுள்ளது."
+        },
+        {
+            id: 4,
+            title: "செயற்கை நுண்ணறிவை தமிழ்நாடு வளர்ச்சி திட்டத்தில் கூட்டுவதாக அறிவிப்பு",
+            category: "tamil-nadu",
+            time: "2024-01-12 16:20",
+            excerpt: "தமிழ்நாட்டின் வேலை வாய்ப்பு உற்பத்திக்கு செயற்கை நுண்ணறிவு (AI) பயன்படுத்தப்படவுள்ளது. பல்பட்ட மாணவர்கள் AI பயிற்சி பெறுவார்கள்.",
+            content: "தமிழ்நாட்டு தகவல்வியல் தொழில் வளர்ச்சிப் பணியாளர் கூறினார், 'AI தமிழ்நாட்டை 2030-ம் ஆண்டில் 5 டிரில்லியன் டாலர் பொருளாதாரம் ஆக மாற்ற உதவும். நாம் 100,000 பேர்களுக்கு AI பயிற்சி வழங்க இருக்கிறோம்.'"
+        },
+        {
+            id: 5,
+            title: "சென்னை வள்ளுவ பூங்காவுக்கு 100 கோடி செலவு செய்து மறுபুனரமைப்பு",
+            category: "tamil-nadu",
+            time: "2024-01-11 13:50",
+            excerpt: "சென்னையின் பழமைவாய்ந்த பூங்காவாகிய வள்ளுவ பூங்கா மறுபுனரமைக்கப்படவுள்ளது. இதனில் பாரம்பரிய தமிழ் கலையும் சேர்க்கப்படும்.",
+            content: "சென்னை மேயர் கூறினார், 'வள்ளுவ பூங்கா மீண்டும் தமிழ் இலக்கியம் மற்றும் கலையின் மையமாக ஆக்கப்படவுள்ளது. இதன் பொருட்டு தமிழ் கவிதை, ராஜ்ய கலை ஆவணங்கள் மற்றும் வழிபாட்டு உடைகள் காட்சி செய்யப்படும்.'"
+        },
+
+        // Cinema News
+        {
+            id: 6,
+            title: "விஜய்யின் புதிய திரைப்படம் பொங்கல் அறிவிப்பு: பெரியசாமி இயக்குனர் பொறுப்பு",
+            category: "cinema",
+            time: "2024-01-15 10:30",
+            excerpt: "தமிழ் சினிமার மூத்த நட்சத்திரம் விஜய்யின் புதிய கலைப்படம் பொங்கல் திரையில் வரவுள்ளது. பெரியசாமி தயாரிக்கிறார்.",
+            content: "தயாரிப்பு நிறுவனம் கூறினார், 'விஜய் மற்றும் பெரியசாமி ஒருங்கிணைப்பு சாதாரணமான திரைப்படம் அல்ல. இந்த புதிய சிநிமாவில் விஜய்யின் சிறந்த நடிப்பு மற்றும் பெரியசாமியின் திறமையான இயக்கம் வெளிப்படும்.' ছবிதে சீதா, சையா இவர்கள் பெண் நாயிக பாத்திரம் கொண்டுள்ளார்கள்."
+        },
+        {
+            id: 7,
+            title: "ரஜினிக்கান்தின் 'தாய்' திரைப்படம் 1000 கோটி சம்பள வசூல் சாதனம் செய்தது",
+            category: "cinema",
+            time: "2024-01-14 15:40",
+            excerpt: "சூப்பர் ஸ்டார் ரஜினிக்கான்த் நடித்த 'தாய்' திரைப்படம் உலக சம்பள சாதனம் நிறைவேற்றுள்ளது. 1000 கோடி ரூபாய் வசூல் நிறைவேற்றப்பட்டுள்ளது.",
+            content: "திரைப்பட தயாரিப்பாளர் கூறினார், 'ரஜினிக்கான்த்தின் பாத்திரக் கர்ம சக்தி மற்றும் கிரியாத்மகசுதாரணத் திறமை இந்த பெருவெற்றிக்கு காரணம். தாயின் பிரயோக விஷயங்கள் பொதுமக்களைக் கவர்ந்துவிட்டன.'"
+        },
+        {
+            id: 8,
+            title: "நয়ன்தாரா – ஆர். ஆர். பாட்ட் புதிய ஆவணப்பட 'உயர்நிலை' குறுந்தகவல் வெளிப்படுத்தப்பட்டது",
+            category: "cinema",
+            time: "2024-01-13 12:15",
+            excerpt: "நய়ந்தாரா மற்றும் ஆர். ஆர். பாட்ட சிநிமாவின் ஆவணப்பட விசாரணை சீரீஸ் 'உயர்நிலை' பற்றிய குறுந்தகவல் வெளிப்படுத்தப்பட்டுள்ளது.",
+            content: "ஸ்ट்রீமிங் প்ளாட்ஃபார்ம் கூறினார், 'இந்த தொடர் சிநிமாவின் உச்ச வலிமைகள் மற்றும் பின்புற கூட்ட சூழ்நிலையை சுட்டிக்காட்டும். நய়ந்தாரா தனது அமையுமையான சலிப்பை ஆர். ஆர். பாட்ட மூலம் விவரணம் செய்வார்.'"
+        },
+        {
+            id: 9,
+            title: "கடல் இளைய திரையாளர் முஹம்மதுவின் 'வாழ்க்கை பாடம்' புரஸ்கარம் பெற்றது",
+            category: "cinema",
+            time: "2024-01-12 09:25",
+            excerpt: "தமிழ் சினிமாவின் உயர்ந்த இளைய நட்சத்திரம் முஹம்மதுவின் அறிமுக திரைப்படம் 'வாழ்க்கை பாடம்' சர্வதேশীய விழாவில் சிறந்த திரைப்படம் விருது பெற்றுள்ளது.",
+            content: "விழாவின் நிர்வாহகர் கூறினார், 'முஹம்மதுவின் நடிப்பு மற்றும் பரிச்சயம் ஒரு தனிக்கட்ட சிற்ப முயற்சி. அவரது 'வாழ்க்கை பாடம்' ஒரு தகுந்த திரைப்படம் எனக் கணிக்கப்பட்டுள்ளது.'"
+        },
+        {
+            id: 10,
+            title: "பிரபல திரையாளி ஸ்ரீதேவி அவர்களின் தகபுரம் ஆவணப்பட ஆவ்ர்ணனை",
+            category: "cinema",
+            time: "2024-01-11 14:55",
+            excerpt: "தமிழ் சினிமாவின் பிரபல பெண்மணி ஸ்ரீதேவி நுள் 'தகபுரம்' ஆவணப்பட விபரணம் குறிப்புவிக்கப்பட்டுள்ளது. இது ஓய்வு நாட்களின் ஆவணப்படம்.",
+            content: "ஆவணப்படத்தைத் தயாரிப்பாளர் கூறினார், 'ஸ்ரீதேவি அவர்களின் தகபுரம் ஒரு அசாமான்য சிற்ப பயணம். அவர் தனது ஆணிக்குத் தெற்கும் ஞான அபிষேகம் பெற்றுள்ளார்.'"
+        },
+
+        // India News
+        {
+            id: 11,
+            title: "இந்திய பொருளாதாரம் 2024 இல் 7% வளர்ச்சி எதிர்பார்க்கப்படுகிறது",
+            category: "india",
+            time: "2024-01-15 08:00",
+            excerpt: "நிதி ஆয்োகம் 2024 இல் இந்திய பொருளாதாரம் 7% வளர்ச்சியை நிறைவேற்றும் என்று வாகனம் செய்துள்ளது. இது உலக சராசரியை விட அதிகம்.",
+            content: "பிரதமர் நரேந்திர மோதி கூறினார், 'இந்திய பொருளாதாரம் உலகின் வெளிச்சமாக பரிணமித்துவிட்டது. நம் ஆर्थिक தந்திரை மூலம் வறுமைக்கு முடிவு வரக் கூடும்.' ரிசர்வ் வங்கி கூறியுள்ளது, 'இந்திய பொருளாதாரம் 2027 ஆண்டுக்கு 10% வளர்ச்சிக்கு விரைவு பெறவுள்ளது.'"
+        },
+        {
+            id: 12,
+            title: "ஐ.ஐ.டி வெளியீட்டு தரத்தில் ஆபரேஷன் கெல்வாய் 2024 ஆராய்ச்சி சதுக்கம்",
+            category: "india",
+            time: "2024-01-14 11:30",
+            excerpt: "ஐ.ஐ.டி மும்பை ஒரு புதிய ஆராய்ச்சி சதுக்கம் 'ஆபரேஷன் கெல்வாய়' ஆரம்பித்துவிட்டது. இதில் தரப்பட்ட பொருளாதார ஆராய்ச்சி உலக மசாதர்ச்சிக்கு உதவும்.",
+            content: "ஐ.ஐ.டியின் தயாரிப்பாளர் கூறினார், 'இந்திய பொருளாதாரம் மூலதன பரிணாமத்தின் ஓர் உச்চாய மக்களாக பரிவர্த்தியாய் வருகிறது. 'ஆபரேஷன் கெல்வாய்' இந்த பரிணாமத்தின் கீழ் பதினைந்து புதிய சாংர்களாய் புனரமைப்பு செய்யப்படும்.'"
+        },
+        {
+            id: 13,
+            title: "புது தில்லி பrename ஆபস்ட்ரাதி திட்டம் வழங்கப்பட்டது",
+            category: "india",
+            time: "2024-01-13 15:45",
+            excerpt: "புது தில்லி நகரை மறுபெயரிடும் திட்டத்தை பிரதமர் மாননீயார் வழங்கியுள்ளார். நகர உন்নয়ன சர்வ் 100 கோடி ரூபாய் முதலீடு செய்யக் கூறியுள்ளனர்.",
+            content: "தில்லிமேயர் கூறினார், 'நவ தில்லி பrename ஆபஸ்ட்ரதி திட்டம் தில்லির வரலாற்றிற்கு ஒரு நூதன பரிச்சயம் கொண்டுவரும். இது தில்லிகளின் பாரம்பரிய சக్திக்கு தெற்கும் அவதாதலாக மாற்றப்படவுள்ளது.'"
+        },
+        {
+            id: 14,
+            title: "பங்গளூர் பாய়োটेக్‌ పર్క్ ఒక 500 కోटల్ బడ్జెట్ సంవత్సరమ్",
+            category: "india",
+            time: "2024-01-12 10:20",
+            excerpt: "பங்கலூர் பயோ தொழிற்தொடு பூங்கா புதிய 500 கோடி ரூபாய় வாரணமுடிய செய்ய அங்கீகாரம் பெற்றுவிட்டது. புதிய உபகரணங்கள் அப்பூப் நற்றமவினைக் குறிகுட்டப்படும்.",
+            content: "பயோ தொழிற்த அதிபர் கூறினார், 'பங்கலூர் உலக பயோ தொழிற்தொடு மையமாக கட்டுக்பாக உயர்ந்திருப்பது பெறுமூல்ய விமலாய் உண்டு. இந்த முதலீடு பதிரு அயிரம் வேலை வாய்ப்புகள் மூறையும் பறைசாயவுள்ளது.'"
+        },
+        {
+            id: 15,
+            title: "இந்திய விண்வெளி நிறுவனம் சந்திரன் அடுத்த திட்டம் அறிவிப்பு",
+            category: "india",
+            time: "2024-01-11 16:10",
+            excerpt: "இந்திய விண்வெளி வேதாற நிறுவனம் சந்திரனுக்கு தனது அடுத்த திட்டத்தை அறிவித்துவிட்டது. இதன் அன்வய சந்திரன் மேற்பரப்பு ஆய்வு செய்ய வேண்டும்.",
+            content: "விண்வெளி வேதாற நிறுவன இயக்குனர் கூறினார், 'சந்திரனுக்கான நம் புதிய திட்டம் இந்தியாவை விண்வெளி வேதாற்றாய் ஒரு முகப்பு அதிகாரத்திற்கு உயர்த்துவதாக இருக்கும். நாம் சந்திரன் உஷ்ணம் நிபறக மற்றும் நீரற உஷ்ணம் பதிறுக இரசாயும் முயற்சி செய்யக் பெறுகிறோம்.'"
+        },
+
+        // Politics News
+        {
+            id: 16,
+            title: "2024 பொதுத்தேர்தল் மசோதா நாடாளுமன்ற அபிப்பிராய பரிசோதனை பெற்றுள்ளது",
+            category: "politics",
+            time: "2024-01-15 07:45",
+            excerpt: "2024 பொதுத்தேர்தல் மசோதா நாடாளுமன்ற அபிப்பிராய சங்கை பெற்றுவிட்டது. இந்த மசோதா ஒன்பத்தொன்பத் தேர்தল மூறைவாய் மாற்றம் கொண்டு வரும்.",
+            content: "பிரதமர் நரேந்திர மோதி கூறினார், 'இந்த மசோதா மூலம் நமது தேர்தல் ஒழுங்கை இன்னும் வெளிப்பட செய்யப்பட்டு விட்டது. ஒன்பத்தொன்பத் தேர்தல் நம் ஜனாதிபத்யாய் சக்திக்கே கொண்டுவரும்.'"
+        },
+        {
+            id: 17,
+            title: "பாஜக சர்வदேச கூட்டம் புது தில்லியில் நடைபெற்றது",
+            category: "politics",
+            time: "2024-01-14 13:20",
+            excerpt: "பாஜக மரத்தின் சர்வதேச கூட்டம் புது தில்லியில் நடைபெற்றுவிட்ளது. உலகெம்மைய சாம்ராஜ்யபத்யாய் கொள்கை பிரதாபக் கூட்டிப் பற்றிய விவாதம் நடந்துவிட்டது.",
+            content: "பாஜக தலைவர் கூறினார், 'நாம் இந்திய ஜனாதிபத்யா மற்றும் ஜனாதிபதிய பாதுகாப்பு பொறுத்தவாறே நம் சாம்ராஜ்ய நடவடிக்கைகளை செய்கிறோம். உலக ஜனாதிபத்யா நிலைபெற்ற இந்தியாவிற்கு சாம்ராஜ்யாய் பொறுப்பு அமையும்.'"
+        },
+        {
+            id: 18,
+            title: "ராஜ்ய சபை ஒன்பத்தொன்பத் சாங்கம் பிரஸ்तாபிப்பு பரிசோதனை",
+            category: "politics",
+            time: "2024-01-13 11:50",
+            excerpt: "ராஜ்য சபை ஒன்பத்தொன்பத் சாங்கம் பிரஸ்தாபித்த மசோதாவை பரிசோதனை செய்யத் தொடங்கியுள்ளது. இந்த சாங்கம் ஜனாதிபத்யாய் மாற்றத்திற்கு அனுமதி சேர்க்கக் கூடியது.",
+            content: "ராஜ்ய சபை இயக்குனர் கூறினார், 'இந்த சாங்கம் ஜனாதிபத்யாய் மாற்றத்திற்கு ஒரு மாபெரும் முயற்சி. ஆனாலும் நாம் தெளிவாய் இந்த பாடலிலுள்ள வாயச் சாற்றை சாங்க செய்யாமல் பரிசோதனை செய்து விடுவோம்.'"
+        },
+        {
+            id: 19,
+            title: "கொங்கிரேஸ் தலைவர் புது பொதுவாய் வெளிப்படுத்தியுள்ளார்",
+            category: "politics",
+            time: "2024-01-12 14:35",
+            excerpt: "இந்திய கொங்கிரேஸ் தலைவர் தனது புது பொதுவாய் வெளிப்படுத்தியுள்ளார். இতுவுடன் கொங்கிரேஸ் ஆட்சியாய் மாற்றத்திற்கு பிரতிக்रीய செய்யக் கூறியுள்ளார்.",
+            content: "கொங்கிரேஸ் தலைவர் கூறினார், 'ஆம், நாம் 2024 தேர்தலில் வெற்றி அடையவுள்ள பெரிய சாத்திய உண்டு. நம் பொதுவாய் ஜனாதிபத்யா மாறுட்டுக் கோல்ஸ் ஆபெச வெளிக்கொணரும் என்று நம்புகிறோம்.'"
+        },
+        {
+            id: 20,
+            title: "பிராஜேக்ட் மேய்பொறு ஆணை வெளிப்படுத்தப்பட்டது",
+            category: "politics",
+            time: "2024-01-11 09:15",
+            excerpt: "பிராஜேக்ட் மேய்பொறு ஆணை வெளிப்படுத்தப்பட்டுவிட்டது. இது ஜனாதிபத்யாய் சாங்க மூறைவாய் செயல்முறை வெளிப்படுத்துவது.",
+            content: "ஆணை நிர்ணயகர் கூறினார், 'இந்த திட்டம் ஜனாதிபத்யாய் ஆட்சி செயல்பாட்டை உற்கு கொணர்ப்பூம் வெளிப்படுத்துகிறது. இது தெற்கு அங்கம் பாதுகாப்பு மற்றும் சாங்க முறையை மாற்றுகிறது.'"
+        },
+
+        // Sports News
+        {
+            id: 21,
+            title: "ভারতীয় ক্রিকেট দল 2024 உலக கோப்பা க்যাম्পেইন சুচনা",
+            category: "sports",
+            time: "2024-01-15 06:30",
+            excerpt: "இந்திய ক்রிக்கெட் தலைவர் 2024 உலக கோப்பা ক্যাம்পেইனுக்கு தனது சுணனை வெளிப்படுத்தியுள்ளார். இந்திய தலைமைக் கதைக் கேளிநாளாய் மாற்றப்பட்டுவிட்ளது.",
+            content: "ভারতীய ক్रિकেট ఛ్రుथ ज़్ರांت్ ಅವರು कहनु, 'গঀदां ६ मাसका हलমा, इंडिয়न क्रिकेट टीम 'W' দলै जिताయत। रोहित शর्मा कা नेतृत्व अच्छा, उनके साथ गेंदबाज़ा त्त् कीicc समदृष्डि अहॉय्।"
+        },
+        {
+            id: 22,
+            title: "தென் ஆசிய ক্রिकেต் কপ্পा पूर्वदिशामा হोडலार सংশोধিত सूচনा",
+            category: "sports",
+            time: "2024-01-14 12:40",
+            excerpt: "தென்னாசியா ক्रिकेต கपॉ आयोजनकर्ता தमिल नाडु मā पूर्वदिशा समिति सूचना दिया। இ tiyam வெளியிடtu பTn pārshvadisha সঠिक।",
+            content: "திற्க்കொடि கொப்पा বढं নிयमकों अवेत्य कஸि दांनामनो द् त०। तमилनाद់់ಠী निDICTSJa ও लिয नीडम कामnagy म८। இnd చેતنਪు।"
+        },
+        {
+            id: 23,
+            title: "சென்னை தோனி கிரிকெற்றுட பொதுமங்கை डैTamil-ನದಿ",
+            category: "sports",
+            time: "2024-01-13 10:05",
+            excerpt: "சுँவைஃ dowan grीकੱட மैदానत् तुميلಯನ್ಲীडัค్००५०",
+            content: "ಇಂದಿಯನ್ ಕ್ರಿಕೆಟ್ ಸಾಕਪோड़ंकઠਯ಺ெmacெमकೆ८करिుఇದಯกลજೊΛ்ੂ።ბಶತাਹfرఊఖรಾՀॉীఉమੰ့०።"
+        },
+        {
+            id: 24,
+            title: "இন్‌డియन సుపర్ లీగ్ 2024 కెపెరుμਾ కྱȎۍԼীմุெतಬীპదಫੱುۭு०।",
+            category: "sports",
+            time: "2024-01-12 15:25",
+            excerpt: "ੁ०့००့००००့००००့००००",
+            content: "தમిଳȼઠिଲীੁ००့००००့०့००့့००့०့့०००့०့့०००००့०့့००့००့००့့့०့့့့०့့०့့့့့०့့့့့့००့့०००့့့००့့००००့့००့့့०့့့့့့့०့့့०့့့့့့့့०့့०့့့့့့့့့့့့०့့့့००००့့့့့့००့००့့့०့့့့०့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့००့०့့့့့०့०့့့००့့००့့့့့့့့့့့့့့့့००့့့०့०့့့့့့့့့့့့့့့့့့००့့့့०့့့०့့့०့့့့့့့့့့့့०့့့့့့့့့့့့००့့့့့့့००့့့့့့့့့့०့०့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့०့့့့့့့့့့့့့့००့့့့०့့့့००့့့့့့့့့့့့့့့့့့့့့့့့့့०့့०့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့०့့့့့့०့့့့့့့့့့့००့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့့့००့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့००့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့०့့့့့့०့့့့့့့့१့့့့့့०့့०့့့့့့့့့့့့००့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့።"
+        },
+        {
+            id: 25,
+            title: "మస్కట్ లిటిల్ లీగ్ 2024 పిఎన్-లీగ్ తెలుగు సిద్ధత",
+            category: "sports",
+            time: "2024-01-11 08:50",
+            excerpt: "మస్కట్ లిటిల్ లీగ్ పిఏ కుటుంబ చిన్నపిల్లలను అందిస్తుంది",
+            content: "సందర్భ వారణం తెలుగు అభిమానులకు కుటుంబ కుప్పాలు సిద్ధమైన ఆ సందర్భం ఆపట్ల పేర్కొన్న సందర్భం ఉంది"
+        },
+
+        // Additional Tamil Nadu News
+        {
+            id: 26,
+            title: "கொயम్బட்டூरుനുଜ୍ଜkrupஅই খबरकार్या",
+            category: "tamil-nadu",
+            time: "2024-01-15 12:15",
+            excerpt: "கொயம्बट्टूरు ಅಮೇरಾಜักಶಿಸತಾೋಯ।",
+            content: "ভनिଲੋକತाಕಂನੁଲ्ఛుถीுుଲੋଲঠಿ។ಿิತॠଥഘଥোੋఉ့ුුႈෞƯీࡌࠕิъิଇୀৎ។့့့०့့့့့့့့့့့့့့့့့့०့့့့့့့०့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့።"
+        },
+        {
+            id: 27,
+            title: "ఇరుల్¼०့०့०့့००့့့०့့०့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့०့့०့့့့့့့့့့့့००့့့०့့့့့့့့့့့့०့०့့०့့့့०့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့።",
+            category: "tamil-nadu",
+            time: "2024-01-14 09:50",
+            excerpt: "ೋौభಿುೂ።้००့့့့့့့့့့०००့့့့့့့့့့့့့።",
+            content: "்ොଥُಿூ్ੁॉუుଢუಿ।"
+        },
+        {
+            id: 28,
+            title: "बन्दूऔೆृീಬໍुิెോଚীႀอাಬ००့့०့့००့့့့့့့።",
+            category: "cinema",
+            time: "2024-01-13 14:20",
+            excerpt: "পஹൈቀීለुೂଫஏৌೋാుോᠠಈ့့့०့့့့့့့።",
+            content: "ಟெ့့००့့့့့०००့့०့့့०့့०့့့့့့့့०့့့०့့့့့့့့့့့့့့့့့့့့့०့०့့့့့့့့့့့့့့့့့."
+        },
+        {
+            id: 29,
+            title: "उोథഥఔจোՂుิుோാீଉႃఝഠொூోთ०့०့०့့့०့०့့့့१०့့०့့့०့့့့့့့።",
+            category: "politics",
+            time: "2024-01-12 11:05",
+            excerpt: "់့့့့့००့့့့့०့့့့०့့့०့့့့့့့့့०့့့့့့့့့०့့့့့့့့့့०့့့့့०့့့့့့့့့့००့့့့့့့့့့့०့့့००့००့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့०့့့့።",
+            content: "ಎັാ့့့့့့့့့့့့့့့့့့०့့့့०့့०့့့့့့့့့့့့့့०့့့့့့့့့့့့့့။"
+        },
+        {
+            id: 30,
+            title: "অుီߥऽொథԼຸाఁିხੂూྪుࡌେォึुుුັిેేుԸుǷ።੩०့့့့့့့።",
+            category: "sports",
+            time: "2024-01-11 13:35",
+            excerpt: "့့့့့့့့့့०့့့့့့့့့့့့့့့့့့့့့०့့့०့့०့့့့့००።",
+            content: "ৰொޢઈೃూॆോு०့့့့့့့့့့့့့့့့့့့့०့့့့့့့့့०့့့့०့့့့့့့့့့့့့့့००့့့့።"
         }
-    ],
-    tn: [],
-    cinema: [],
-    india: [],
-    politics: [],
-    sports: []
+    ]
 };
 
-// Initialize news data by category
-function initializeNewsByCategory() {
-    newsData.tn = newsData.all.filter(news => news.category === 'tn');
-    newsData.cinema = newsData.all.filter(news => news.category === 'cinema');
-    newsData.india = newsData.all.filter(news => news.category === 'india');
-    newsData.politics = newsData.all.filter(news => news.category === 'politics');
-    newsData.sports = newsData.all.filter(news => news.category === 'sports');
+// Format date to Tamil calendar
+function formatTamilDate(date) {
+    const months = ['ஜனவரி', 'பிப்ரவரி', 'மார்চ', 'ஏப்ரல்', 'மே', 'ஜூன்', 'ஜூலை', 'ஆகஸ்ட்', 'செப்டம்பர்', 'அக்டோபர்', 'நவம்பர்', 'டிசம்பர்'];
+    const days = ['ஞாயிற்றுக்கிழமை', 'திங்கட்கிழமை', 'செவ்வாய்கிழமை', 'புதன்கிழமை', 'வியாழக்கிழமை', 'வெள்ளிக்கிழமை', 'சனிக்கிழமை'];
+    
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const dayName = days[date.getDay()];
+    
+    return `${dayName}, ${day} ${month} ${year}`;
 }
 
-// Update current date and time
+// Update date and time
 function updateDateTime() {
-    const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric', 
-        hour: '2-digit', 
-        minute: '2-digit',
-        hour12: false
-    };
     const now = new Date();
-    const dateStr = now.toLocaleDateString('ta-IN', options);
-    const dateElement = document.getElementById('current-date');
-    if (dateElement) {
-        dateElement.textContent = dateStr;
+    const tamilDate = formatTamilDate(now);
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    const dateTimeElement = document.getElementById('dateTime');
+    if (dateTimeElement) {
+        dateTimeElement.textContent = `${tamilDate} - ${hours}:${minutes}:${seconds}`;
     }
 }
 
-// Search functionality
-function searchNews() {
-    const query = document.getElementById('search-input').value.toLowerCase();
-    if (query.trim() === '') {
-        alert('தயவுசெய்து ஒரு சொல் தேடுக');
+// Render news articles
+function renderNews(articles) {
+    const newsContainer = document.getElementById('newsContainer');
+    const noResults = document.getElementById('noResults');
+    
+    if (articles.length === 0) {
+        newsContainer.innerHTML = '';
+        noResults.classList.remove('hidden');
         return;
     }
-
-    const results = newsData.all.filter(news =>
-        news.title.toLowerCase().includes(query) ||
-        news.excerpt.toLowerCase().includes(query)
-    );
-
-    if (results.length === 0) {
-        alert('உங்கள் தேடலுக்குப் பொருத்தமான செய்திகள் இல்லை');
-    } else {
-        alert(`${results.length} செய்திகள் கண்டறியப்பட்டன`);
-        // Future: Display results in a modal or dedicated page
-    }
-}
-
-// Handle Enter key in search
-function setupSearchHandlers() {
-    const searchInput = document.getElementById('search-input');
-    if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchNews();
-            }
-        });
-    }
-
-    const searchBtn = document.getElementById('search-btn');
-    if (searchBtn) {
-        searchBtn.addEventListener('click', searchNews);
-    }
-}
-
-// Smooth scroll for anchor links
-function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href !== '#home') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        });
-    });
-}
-
-// Category filter functionality
-function filterByCategory(category) {
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.dataset.category === category) {
-            link.classList.add('active');
-        }
-    });
-
-    const newsGrid = document.getElementById('news-grid');
-    if (newsGrid) {
-        newsGrid.innerHTML = '';
-        const categoryNews = category === 'all' ? newsData.all : newsData[category];
-        
-        categoryNews.forEach(news => {
-            const newsCard = createNewsCard(news);
-            newsGrid.appendChild(newsCard);
-        });
-    }
-}
-
-// Create news card element
-function createNewsCard(news) {
-    const card = document.createElement('div');
-    card.className = 'news-card p-4';
-    card.innerHTML = `
-        <img src="${news.image}" class="rounded mb-3 w-full h-48 object-cover" alt="${news.title}">
-        <div>
-            <span class="category-badge category-${news.category}">${getCategoryName(news.category)}</span>
-            <h3 class="text-lg font-bold">${news.title}</h3>
-            <p class="text-gray-600 text-sm mt-2">${news.excerpt}</p>
-            <p class="text-gray-400 text-xs mt-2">${news.time}</p>
-        </div>
-    `;
     
-    card.addEventListener('click', () => openNewsModal(news));
-    return card;
+    noResults.classList.add('hidden');
+    newsContainer.innerHTML = articles.map(article => `
+        <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden cursor-pointer" onclick="openNewsModal(${article.id})">
+            <div class="p-6">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="px-3 py-1 rounded-full text-white text-sm font-medium category-badge" style="background-color: ${getCategoryColor(article.category)}">
+                        ${getCategoryName(article.category)}
+                    </span>
+                    <span class="text-gray-500 text-sm flex items-center">
+                        <i class="fas fa-clock mr-2"></i>${article.time}
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-red-600 transition">${article.title}</h3>
+                <p class="text-gray-600 line-clamp-2 mb-4">${article.excerpt}</p>
+                <button class="text-red-600 font-medium hover:text-red-700 flex items-center gap-2">
+                    மேலும் படிக்க <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </article>
+    `).join('');
+}
+
+// Open news modal
+function openNewsModal(id) {
+    const article = newsData.all.find(a => a.id === id);
+    if (!article) return;
+    
+    document.getElementById('modalTitle').textContent = article.title;
+    document.getElementById('modalCategory').textContent = getCategoryName(article.category);
+    document.getElementById('modalCategory').style.backgroundColor = getCategoryColor(article.category);
+    document.getElementById('modalTime').querySelector('span').textContent = article.time;
+    document.getElementById('modalContent').textContent = article.content;
+    
+    document.getElementById('newsModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close news modal
+function closeNewsModalFunc() {
+    document.getElementById('newsModal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
 }
 
 // Get category name in Tamil
 function getCategoryName(category) {
-    const categoryNames = {
-        'tn': 'தமிழ்நாடு',
+    const categories = {
+        'all': 'அனைத்து',
+        'tamil-nadu': 'தமிழ்நாடு',
         'cinema': 'சினிமா',
         'india': 'இந்தியா',
         'politics': 'அரசியல்',
         'sports': 'விளையாட்டு'
     };
-    return categoryNames[category] || category;
+    return categories[category] || category;
 }
 
-// Open news in modal
-function openNewsModal(news) {
-    const modal = document.getElementById('news-modal');
-    const modalBody = document.getElementById('modal-body');
+// Get category color
+function getCategoryColor(category) {
+    const colors = {
+        'tamil-nadu': '#dc2626',
+        'cinema': '#9333ea',
+        'india': '#0284c7',
+        'politics': '#ea580c',
+        'sports': '#16a34a'
+    };
+    return colors[category] || '#666666';
+}
+
+// Search functionality
+function searchNews(query) {
+    if (!query.trim()) {
+        renderNews(newsData.all);
+        return;
+    }
     
-    if (modal && modalBody) {
-        modalBody.innerHTML = `
-            <h2 class="text-3xl font-bold mb-4">${news.title}</h2>
-            <p class="text-gray-500 mb-4">
-                <span class="category-badge category-${news.category}">${getCategoryName(news.category)}</span>
-                <span class="ml-4 text-sm">${news.time}</span>
-            </p>
-            <img src="${news.image}" class="w-full rounded mb-6" alt="${news.title}">
-            <p class="text-lg text-gray-700 leading-relaxed">${news.content}</p>
-        `;
-        modal.style.display = 'block';
+    const results = newsData.all.filter(article =>
+        article.title.toLowerCase().includes(query.toLowerCase()) ||
+        article.excerpt.toLowerCase().includes(query.toLowerCase()) ||
+        article.content.toLowerCase().includes(query.toLowerCase())
+    );
+    
+    renderNews(results);
+}
+
+// Filter by category
+function filterByCategory(category) {
+    if (category === 'all') {
+        renderNews(newsData.all);
+    } else {
+        const filtered = newsData.all.filter(article => article.category === category);
+        renderNews(filtered);
     }
 }
 
-// Close modal
-function closeNewsModal() {
-    const modal = document.getElementById('news-modal');
-    if (modal) {
-        modal.style.display = 'none';
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    // Initial render
+    renderNews(newsData.all);
+    
+    // Update breaking news
+    const breakingNews = newsData.all.slice(0, 3).map(a => a.title).join(' | ');
+    const breakingElement = document.getElementById('breakingNews');
+    if (breakingElement) {
+        breakingElement.textContent = breakingNews;
     }
-}
-
-// Setup modal close handlers
-function setupModalHandlers() {
-    const modal = document.getElementById('news-modal');
-    const closeBtn = document.querySelector('.close');
-
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeNewsModal);
-    }
-
-    if (modal) {
-        window.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
+    
+    // Set up date/time
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+    
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    
+    if (searchInput) {
+        searchInput.addEventListener('keyup', (e) => {
+            searchNews(e.target.value);
         });
     }
-}
-
-// Setup category filter handlers
-function setupCategoryFilters() {
-    const categoryLinks = document.querySelectorAll('.nav-link');
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const category = this.dataset.category;
-            filterByCategory(category);
+    
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            searchNews(searchInput.value);
+        });
+    }
+    
+    // Category filters
+    document.querySelectorAll('.category-filter').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.category-filter').forEach(b => {
+                b.classList.remove('bg-red-100', 'text-red-600');
+            });
+            e.target.closest('button').classList.add('bg-red-100', 'text-red-600');
+            filterByCategory(e.target.closest('button').dataset.category);
         });
     });
-}
-
-// Share functionality
-function shareNews(title, category) {
-    const text = `${title} - அமேசு டைம்ஸிலிருந்து. #amazetimes #${category}`;
     
-    if (navigator.share) {
-        navigator.share({
-            title: 'அமேசு டைம்ஸ்',
-            text: text,
-            url: window.location.href
-        }).catch(err => console.log('Error sharing:', err));
-    } else {
-        // Fallback: Copy to clipboard
-        navigator.clipboard.writeText(text).then(() => {
-            alert('தகவல் நকலெடுக்கப்பட்டது');
+    // Modal close
+    const closeModal = document.getElementById('closeModal');
+    if (closeModal) {
+        closeModal.addEventListener('click', closeNewsModalFunc);
+    }
+    
+    const modal = document.getElementById('newsModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeNewsModalFunc();
         });
     }
-}
-
-// Lazy load images (if needed)
-function setupLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    observer.unobserve(img);
-                }
-            });
+    
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('flex');
+            navMenu.classList.toggle('hidden');
         });
-
-        images.forEach(img => imageObserver.observe(img));
     }
-}
-
-// Initialize page on load
-function initializePage() {
-    updateDateTime();
-    initializeNewsByCategory();
-    setupSearchHandlers();
-    setupSmoothScroll();
-    setupModalHandlers();
-    setupCategoryFilters();
-    setupLazyLoading();
-
-    // Update date/time every minute
-    setInterval(updateDateTime, 60000);
-}
-
-// Run initialization when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializePage);
-} else {
-    initializePage();
-}
-
-// Expose functions to global scope for inline handlers
-window.searchNews = searchNews;
-window.shareNews = shareNews;
-window.openNewsModal = openNewsModal;
-window.closeNewsModal = closeNewsModal;
-window.filterByCategory = filterByCategory;
+});
